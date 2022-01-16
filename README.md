@@ -9,8 +9,8 @@ _Participantes del proyecto durante el desarollo del sitio:_
 
 * **Juan Serrano** - *Project Manager / Full-stack* - [juanserrano](https://github.com/juaniserrano)
 * **Matias Rabinovich** - *Disenio Grafico / Full-stack* - [matrabinovich](https://github.com/matrabinovich)
-* **Evisandy Trompiz** - *Documentacion / Full-stack* [evitrompiz](https://github.com/evitrompiz)
-* **Eglimey Almeida** - *Documentacion / Full-stack* [almeida-eg](https://github.com/almeida-eg)
+* **Evisandy Trompiz** - *Documentacion / Full-stack* - [evitrompiz](https://github.com/evitrompiz)
+* **Eglimey Almeida** - *Documentacion / Full-stack* - [almeida-eg](https://github.com/almeida-eg)
 
 ## Sitios de Referencia:
 
