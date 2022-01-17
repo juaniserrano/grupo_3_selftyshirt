@@ -2,15 +2,15 @@
 
 _La personalidad, es el mejor accesorio que puedes llevar. Roberto Cavalli_
 
-_En este proyecto desarollamos un sitio web el cual se dedica a la venta de ropa unisex 👕👚 con con diseños propios e innovadores_
+En este proyecto desarollamos un sitio web el cual se dedica a la venta de ropa unisex 👕👚 con con diseños propios e innovadores
 
 ## Sobre nuestra propuesta 👨‍🏫
 
-_El universo del diseño viene ligado a la pasión y a la creatividad, por eso nuestro target se apunta a personas creativas que quieran mostrar su personalidad y carácter a través del diseño o estilo de su ropa, está dirigida a la gente joven y adulta que se sienta libre de expresar._
+El universo del diseño viene ligado a la pasión y a la creatividad, por eso nuestro target se apunta a personas creativas que quieran mostrar su personalidad y carácter a través del diseño o estilo de su ropa, está dirigida a la gente joven y adulta que se sienta libre de expresar.
 
 ## ¿Cómo ajustaremos nuestra oferta a ese público? 🛗
 
-_Ofrecer la oportunidad de que el público se sienta parte del equipo, con la capacidad de customizar las remeras con el diseño y el estilo que deseen, utilizando materiales que no afecten el medio ambiente, con técnicas aplicables a muchos tipos de superficies y que promuevan la economía sustentable ayudando a seguir demandando el mercado en el sector de las camisetas personalizadas, que actualmente está siendo marcada por la innovación tecnológica y los diseños que se ofrecen._
+Ofrecer la oportunidad de que el público se sienta parte del equipo, con la capacidad de customizar las remeras con el diseño y el estilo que deseen, utilizando materiales que no afecten el medio ambiente, con técnicas aplicables a muchos tipos de superficies y que promuevan la economía sustentable ayudando a seguir demandando el mercado en el sector de las camisetas personalizadas, que actualmente está siendo marcada por la innovación tecnológica y los diseños que se ofrecen.
 
 ## Autores ✒️
 
