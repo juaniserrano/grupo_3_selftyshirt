@@ -28,3 +28,9 @@ _Participantes del proyecto durante el desarollo del sitio:_
 * https://www.estampame.com/sitioweb/ Por los clientes que apuntan.
 * http://www.maxsublime.com.ar/ Por los productos 
 * https://tuinfinity.empretienda.com.ar/ Por los clientes que apuntan y estetica
+
+## Backlog en Trello 📆
+
+Para ver informacion mas detallada de los sprints 🏃
+
+https://trello.com/b/2PA8t0O9/selfty-shirt
