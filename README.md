@@ -17,7 +17,7 @@ Ofrecer la oportunidad de que el público se sienta parte del equipo, con la cap
 _Participantes del proyecto durante el desarollo del sitio:_
 
 * **Juan Serrano** - *Project Manager / Full-stack* - Tecnico en Informatica, audiofilo, amante de los videojuegos y entusiasta de perifericos [juanserrano](https://github.com/juaniserrano)
-* **Matias Rabinovich** - *Disenio Grafico / Full-stack* - Diseñador multimedial, cinefilo y chef amateur [matrabinovich](https://github.com/matrabinovich)
+* **Matias Rabinovich** - *Diseño Grafico / Full-stack* - Diseñador multimedial, cinefilo y chef amateur [matrabinovich](https://github.com/matrabinovich)
 * **Evisandy Trompiz** - *Documentacion / Full-stack* - Analista de Contenido, de profesión ingeniero con marcada experiencia en la docencia [evitrompiz](https://github.com/evitrompiz)
 * **Eglimey Almeida** - *Documentacion / Full-stack* - Especialista en proyecto, sin experiencia en programación o diseño web [almeida-eg](https://github.com/almeida-eg)
 
