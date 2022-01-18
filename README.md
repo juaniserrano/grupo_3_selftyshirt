@@ -24,7 +24,13 @@ _Participantes del proyecto durante el desarollo del sitio:_
 ## Sitios de Referencia 📝
 
 * https://www.soyturemera.com.ar/ Por los clientes que apuntan, Identidad y audiencia local
-* https://www.customink.com/products/t-shirts/4 Por los productos que ofrecen  y funcionalidades
-* https://www.estampame.com/sitioweb/ Por los clientes que apuntan.
+* https://www.customink.com/products/ Por los productos que ofrecen  y funcionalidades
+* https://www.estampame.com/ Por los clientes que apuntan.
 * http://www.maxsublime.com.ar/ Por los productos 
 * https://tuinfinity.empretienda.com.ar/ Por los clientes que apuntan y estetica
+
+## Backlog en Trello 📆
+
+Para ver informacion mas detallada de los sprints 🏃
+
+https://trello.com/b/2PA8t0O9/selfty-shirt
