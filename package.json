@@ -1,0 +1,26 @@
+{
+  "name": "grupo_3_selftyshirt",
+  "version": "1.0.0",
+  "description": "Selfty Shirt web E-commerce",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juaniserrano/grupo_3_selftyshirt.git"
+  },
+  "keywords": [
+    "ropa"
+  ],
+  "author": "Grupo 3 Digital House",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juaniserrano/grupo_3_selftyshirt/issues"
+  },
+  "homepage": "https://github.com/juaniserrano/grupo_3_selftyshirt#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "nodemon": "^2.0.15"
+  }
+}
