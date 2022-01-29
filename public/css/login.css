@@ -1,0 +1,7 @@
+header.top-header{
+    position: relative;
+    width: 1400px;
+    height: 104px;
+    flex-direction: column-reverse;
+    background-color: black;
+}

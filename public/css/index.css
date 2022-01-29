@@ -1,0 +1,15 @@
+* {
+  font-family: "Public Sans", sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+div.box {
+  color: white;
+  background-color: #222831;
+}
+
+div.navbar {
+  background-color: #eeeeee;
+  color: black;
+}
