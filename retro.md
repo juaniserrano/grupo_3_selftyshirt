@@ -1,4 +1,4 @@
-# Retrospective Sprint 1 (Modelo Estrella de Mar)
+# Retrospective Sprint 1 (Modelo Estrella de Mar) ⭐
 
 ![Ejemplo ilustrativo Modelo Estrella de Mar](https://www.grandespymes.com.ar/wp-content/uploads/2019/02/Redefinir-tus-Objetivos-con-la-Retrospectiva-Starfish.png "Estrella de Mar")
 
