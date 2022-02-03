@@ -59,7 +59,7 @@ select option {
   width: 100%;
   padding-top: 40px;
   padding-bottom: 40px;
-  font-size: 60px;
+  font-size: 5vh;
   text-align: center;
   text-decoration: black;
   font-weight: bolder;
@@ -303,3 +303,42 @@ img:nth-child(3) {
 .buscar input:focus {
   width: 320px;
 }
+
+@media (max-width: 769px) {
+  .box {
+    font-size: 10px;
+    height: 4vh;
+  }
+
+  #ul_top_hypers {
+    display: flex;
+    list-style-type: none;
+    border-bottom: 1px solid #222831;
+    justify-content: space-around;
+    font-size: small;
+    padding-top: 2%;
+  }
+  .pic-ctn {
+    position: absolute;
+    width: 90%;
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* Pantallas muy grandes  (desktops de más de 1200px de ancho)
+//No hace falta media-query porque será nuestro diseño por defecto
+
+//Pantallas grandes (desktops de menos de 1200px)
+@media (max-width: 1199.98px) { ... }
+
+//Pantallas medianas (tablets de menos de 992px)
+@media (max-width: 991.98px) { ... }
+
+//Pantallas pequeñas (móviles en landscape de menos de 768px)
+@media (max-width: 767.98px) { ... }
+
+//Pantallas muy pequeñas (móviles en portrait de menos de 576px)
+@media (max-width: 575.98px) { ... }*/
