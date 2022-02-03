@@ -1,36 +1,5 @@
-<<<<<<< HEAD
-.flex-container {
-    display: flex;
-    padding: 10px;
-    font-family: 'sans-serif';
-    background-color: #222831;
-}
-
-.flex-container div{
-    font-family: sans-serif;
-    width: 50%;
-    text-align: center;
-    font-size: 16px;
-    color: white;
-}
-.flex-navbar {
-    display: flex;
-    padding: 10px;
-    font-family: 'sans-serif';
-    background-color: #EEEEEE;
-    justify-content: space-around;
-}
-
-.flex-navbar div{
-    font-family: sans-serif;
-    width: 50%;
-    text-align: center;
-    font-size: 10px;
-    color: white;
-}
-=======
 * {
-  font-family: "Public Sans", sans-serif;
+  font-family: sans-serif; /*Se quita el public sans, ya que pisaba la letra*/
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
@@ -267,4 +236,3 @@ img:nth-child(3) {
 .content {
   min-height: calc(110vh - 70px);
 }
->>>>>>> 6559b4e6d6f04dc8fb8889402a2080e226874fc1
