@@ -2,8 +2,8 @@ const express = require("express");
 const app = express();
 app.use(express.static("public"));
 
-app.listen(3000, () => {
-  console.log("Servidor funcionando");
+app.listen(process.env.PORT || 3000, function() {
+  console.log('Servidor funcionando');
 });
 
 app.get("/", (req, res) => {
@@ -21,3 +21,8 @@ app.get("/register", (req, res) => {
 app.get("/cart", (req, res) => {
   res.sendFile(__dirname + "/views/productCart.html");
 });
+
+app.get("/detail", (req, res) => {
+  res.sendFile(__dirname + "/views/productDetail.html");
+});
+

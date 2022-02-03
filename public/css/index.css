@@ -225,12 +225,12 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50%;
+  height: 100%;
 }
 
 .pic-ctn {
   position: absolute;
-  width: 70%;
+  width: 60%;
   margin-top: 40px;
   display: flex;
   justify-content: center;
