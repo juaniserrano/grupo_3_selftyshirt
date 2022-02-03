@@ -115,6 +115,7 @@ input[type=submit] {
     justify-content: space-around;
     margin: auto;
     width: 100%;
+    cursor: text
   }
 
   a:visited {
