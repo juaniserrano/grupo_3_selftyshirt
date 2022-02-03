@@ -210,3 +210,8 @@ a {
   color: #616161;
   font-weight: bold;
 }
+
+.recordar-check input{
+  display: initial;
+  width: auto;
+}
