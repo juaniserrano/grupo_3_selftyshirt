@@ -96,7 +96,7 @@ img {
 .logophoto {
   width: 20%;
   text-align: center;
-  padding: 10px;
+  position: relative;
 }
 
 .button-container {
@@ -257,6 +257,8 @@ img:nth-child(3) {
 }
 
 .buscar {
+  position: relative;
+  bottom: 1.3vh;
 }
 
 .buscar input {
@@ -325,6 +327,10 @@ img:nth-child(3) {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .buscar{
+    bottom: 0.5vh;
   }
 }
 

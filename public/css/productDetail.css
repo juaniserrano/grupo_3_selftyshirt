@@ -39,10 +39,11 @@
     height: auto;
   }
   
-  .logophoto {
-    width: 20%;
+  .div_top_hypers .logophoto {
+    width: 30%;
     text-align: center;
-    padding: 10px;
+    position: relative;
+    bottom: 2vh;
   }
   
   .button-container {
