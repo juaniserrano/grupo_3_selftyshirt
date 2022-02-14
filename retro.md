@@ -18,3 +18,24 @@
 
 ## Less of:
 * Stop Doing: Idem punto anterior
+
+---
+
+# Retrospective Sprint 2 (Modelo Estrella de Mar) ⭐
+
+
+## Start Doing:
+* Investigación de grid para aplicar en el CSS de la pagina
+* Implementacion de Weeklys (2 veces por semana)
+* Crear weekly.md con los avances
+
+## More of: 
+* Pruebas de codigo
+* Investigación de estilos en CSS
+* Mas reuniones grupales
+
+## Keep Doing:
+* Investigación de estilos en CSS
+
+## Less of:
+* Tiempo muerto sin trabajar en el proyecto

@@ -8,7 +8,7 @@
 }
 
 .box {
-  height: 60px;
+  height: 50px;
   flex-direction: row;
   background-color: black;
   color: #eeeeee;
@@ -17,26 +17,6 @@
   font-size: larger;
   margin: auto;
   padding-top: 12px;
-}
-
-select {
-  margin-left: 5px;
-  font-size: larger;
-  background-color: black;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-select option {
-  margin: 40px;
-  background: white;
-  color: black;
-  cursor: pointer;
-}
-
-.currency i {
-  background-color: black;
 }
 
 .currency,
@@ -59,7 +39,7 @@ select option {
   width: 100%;
   padding-top: 40px;
   padding-bottom: 40px;
-  font-size: 5vh;
+  font-size: 60px;
   text-align: center;
   text-decoration: black;
   font-weight: bolder;
@@ -96,7 +76,7 @@ img {
 .logophoto {
   width: 20%;
   text-align: center;
-  position: relative;
+  padding: 10px;
 }
 
 .button-container {
@@ -225,12 +205,12 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: 50%;
 }
 
 .pic-ctn {
   position: absolute;
-  width: 60%;
+  width: 70%;
   margin-top: 40px;
   display: flex;
   justify-content: center;
@@ -256,95 +236,79 @@ img:nth-child(3) {
   min-height: calc(120vh - 70px);
 }
 
-.buscar {
-  position: relative;
-  bottom: 1.3vh;
+.carrito-ctn {
+  background-color: hotpink;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
 }
 
-.buscar input {
-  width: 0px;
-  height: 40px;
-  padding: 0 20px;
-  padding-left: 20%;
-  font-size: 18px;
-  color: black;
-  outline: none;
-  border: 1px solid black;
-  border-radius: 20px;
-  transition: all 0.8s ease;
-  margin-top: 8px;
+.orden-de-compra {
+  background-color: khaki;
+  padding: 2%;
+  width: 30%;
+  height: 1000px;
+  flex-direction: column;
+  display: flex;
+  font-size: small;
 }
 
-.buscar .btn {
-  position: absolute;
-  background: black;
-  width: 55px;
-  height: 55px;
-  line-height: 55px;
-  text-align: center;
-  color: #eeeeee;
+.orden-de-compra > h2 {
   font-size: 20px;
-  border-radius: 40%;
-  cursor: pointer;
-  padding-bottom: 2%;
 }
 
-.buscar .btn i {
-  background-color: black;
+.carrito-ctn-grande {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
 }
 
-.select currency {
-  height: 1px;
-  width: 1px;
+.orden-de-compra > input {
+  border: 2px solid black;
+  border-radius: 2px;
+  height: 3%;
+  padding: 2%;
 }
 
-.buscar:hover input {
-  width: 320px;
+.orden-de-compra > input[type="submit" i] {
+    border: 1px solid black;
+    color: white;
+    background-color: black;
+    height: 5%;
+    padding: 2%;
+    border-radius: 0px;
 }
 
-.buscar input:focus {
-  width: 320px;
+br {
+  content: "";
+  margin: 2em;
+  display: block;
+  font-size: 40%;
 }
 
-@media (max-width: 769px) {
-  .box {
-    font-size: 10px;
-    height: 4vh;
-  }
-
-  #ul_top_hypers {
+.subtotal-ctn{
     display: flex;
-    list-style-type: none;
-    border-bottom: 1px solid #222831;
-    justify-content: space-around;
-    font-size: small;
-    padding-top: 2%;
-  }
-  .pic-ctn {
-    position: absolute;
-    width: 90%;
-    margin-top: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .buscar{
-    bottom: 0.5vh;
-  }
+    font-size: normal;
+    justify-content: space-between;
 }
 
-/* Pantallas muy grandes  (desktops de más de 1200px de ancho)
-//No hace falta media-query porque será nuestro diseño por defecto
+.envio-ctn{
+    display: flex;
+    font-size: normal;
+    justify-content: space-between;
+}
 
-//Pantallas grandes (desktops de menos de 1200px)
-@media (max-width: 1199.98px) { ... }
+.total-ctn{
+    padding-top: 10px;
+    display: flex;
+    font-size: normal;
+    justify-content: space-between;
+}
 
-//Pantallas medianas (tablets de menos de 992px)
-@media (max-width: 991.98px) { ... }
-
-//Pantallas pequeñas (móviles en landscape de menos de 768px)
-@media (max-width: 767.98px) { ... }
-
-//Pantallas muy pequeñas (móviles en portrait de menos de 576px)
-@media (max-width: 575.98px) { ... }*/
+hr{
+    border-top: 1.2px solid black;
+  }
