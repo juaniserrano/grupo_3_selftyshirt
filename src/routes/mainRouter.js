@@ -4,6 +4,7 @@ const router = express.Router();
 
 // Aća nos falta traer el controller --listo
 const mainController = require('../controllers/mainController')
+const productController = require('../controllers/productsController')
 
 // Acá definimos las rutas --listo
 router.get('/', mainController.index);

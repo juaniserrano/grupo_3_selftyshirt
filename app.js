@@ -1,27 +1,26 @@
 const express = require("express");
 const app = express();
 
-//const path = require('path');
+const path = require('path');
 //app.use(express.static(path.resolve(__dirname, './public')));
 
 app.use(express.static("public"));
 
+
 let rutaMain = require('./src/routes/mainRouter.js');
 
-let rutaProducts = require('./src/routes/productsRouter');
+let rutaProducts = require('./src/routes/productsRouter.js');
 
 let rutaUsers = require('./src/routes/usersRouter');
 
 //Indico a express que utilizaré un Template Engine
 app.set('view engine', 'ejs');
 
-//app.set('views', './src/views/index.ejs');
+app.set('views', (path.join(__dirname, './src/views')));
 
 app.use('/', rutaMain);
-app.use('/productCart', rutaProducts);
-app.use('/productDetail', rutaProducts);
-app.use('/login', rutaUsers);
-app.use('/register', rutaUsers);
+app.use('/', rutaProducts);
+app.use('/', rutaUsers);
 
 
 app.listen(process.env.PORT || 3000, function() {

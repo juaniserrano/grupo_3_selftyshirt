@@ -1,13 +1,25 @@
-const path= require('path');
+const fs = require("fs");
+const path = require("path");
 
-const productsController = {
-    cart: (req, res) => {
-        return res.render(path.join(__dirname, '../views/products/productCart.ejs'));
-    },
-    detail: (req, res) => {
-        return res.render(path.join(__dirname, '../views/products/productDetail.ejs'));
-    }
+function findAll(){
+    let data = fs.readFileSync(path.join(__dirname, "..data/products/json"), "utf-8");
+    let productos = JSON.parse(data);
+    return productos;
+}
+
+//function writeFile(array){
+//    let string = JSON.stringify(array, null, 4);
+//    fs.writeFileSync(path.join(__dirname, "..data/products/json"), string, "utf-8");
+//}
+
+const controller = {
+  cart: function (req, res) {
+    res.render("products/productCart.ejs");
+  },
+  detail: (req, res) => {
+    res.render("products/productDetail.ejs");
+  }
 };
 
 // Acá exportamos el resultado
-module.exports = productsController;
+module.exports = controller;
