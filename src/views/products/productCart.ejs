@@ -1,0 +1,48 @@
+<%- include('../partials/head') %>
+    <link rel="stylesheet" href="css/productCart.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <title>Carrito de compras - Selfty Shirt</title>
+  </head>
+
+  <body>
+
+    <body>
+      <%- include('../partials/header') %>
+
+    <div class="carrito-ctn-grande">
+      <div class="carrito-ctn">
+        <div class="carrito-items">Carrito de compras
+          <i class="fas fa-shopping-cart"></i>
+          <h2>Remera Negra</h2>
+        </div>
+
+        <div class="carrito-info-pedido">Informacion del pedido</div>
+      </div>
+
+      <div class="orden-de-compra">
+        <h2>Orden de compra</h2><br />
+        <br />
+        <input type="text" name="cupon" placeholder="Cupon de descuento" />
+        <br />
+        <br />
+        <div class="subtotal-ctn">
+          Subtotal <br>
+          $4998
+        </div>
+        <div class="envio-ctn">
+          Envio <br>
+          $500
+        </div>
+        <br>
+        <hr>
+        <div class="total-ctn">
+          Total <br>
+          5498
+        </div>
+        <br>
+        <br>
+        <input type="submit" value="Finalizar Compra" />
+      </div>
+    </div>
+  </body>
+</html>
