@@ -12,5 +12,12 @@
     "description": "Remera negra DH",
     "reference": "REM-001",
     "status": "inactive"
+  },
+  {
+    "id": 3,
+    "name": "Remera",
+    "description": "Remera negra DH",
+    "reference": "REM-002",
+    "status": "inactive"
   }
 ]
