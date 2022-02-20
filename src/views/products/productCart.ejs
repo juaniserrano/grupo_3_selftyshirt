@@ -8,41 +8,109 @@
 
     <body>
       <%- include('../partials/header') %>
-
     <div class="carrito-ctn-grande">
+      
       <div class="carrito-ctn">
-        <div class="carrito-items">Carrito de compras
-          <i class="fas fa-shopping-cart"></i>
-          <h2>Remera Negra</h2>
-        </div>
+        <h2>Carrito de compras</h2>
+        <a href="/">Continuar comprando <i class="fas fa-shopping-cart"></i></a>
 
-        <div class="carrito-info-pedido">Informacion del pedido</div>
-      </div>
+        <section class="detail-product">
+          <div class="img-ctn-poduct">
+            <img src="images/image-remera1.png" alt="remera"/>
+          </div>
 
+          <div class="description-product-cart">
+            <ul>
+              <li><h3>Nombre del producto</h3></li>
+              <br>
+              <li>Talle</li>
+              <br>
+              <li>Cantidad</li>
+              <br>
+              <li><h3>Precio</h3></li>
+            </ul>
+          </div>
+
+          <div class="enlace">
+            <a href="#">Eliminar</a>
+          </div>
+        </section>
+
+        <br>
+      
+        <section class="detail-product">
+          <div class="img-ctn-poduct"><img src="images/image-remera1.png" alt="remera"/>
+          </div>
+
+          <div class="description-product-cart">
+            <ul>
+              <li><h3>Nombre del produtco</h3></li>
+              <br>
+              <li>Talle</li>
+              <br>
+              <li>Cantidad</li>
+              <br>
+              <li><h3>Precio</h3></li>
+              <br>
+            </ul>
+          </div>
+
+          <div class="enlace">
+            <a href="#">Eliminar</a>
+          </div>
+        </section>
+        
+        <section class="info">
+          <h3>Información del pedido</h3>
+          <hr>
+          <div class="cart-polit-reemb">
+            <div> Políticas de Reembolso </div>
+            <div><a href="">+</a></div>
+          </div>
+
+          <br>
+
+          <div class="cart-opc-env">
+            <div>Opciones de Envío</div>         
+            <div><a href="">+</a></div>
+          </div>
+          <br>
+        </section>
+
+     </div>
+     <br>
+<!--Hasta aquí el detalle del carrito-->
       <div class="orden-de-compra">
-        <h2>Orden de compra</h2><br />
-        <br />
+        <div><h2>Orden de compra</h2></div>
+        <br>
         <input type="text" name="cupon" placeholder="Cupon de descuento" />
-        <br />
-        <br />
+        <br>
+        <br>
+
         <div class="subtotal-ctn">
-          Subtotal <br>
-          $4998
+          <div>Subtotal</div>
+          <div>$4998</div>
         </div>
+        <br>
+
         <div class="envio-ctn">
-          Envio <br>
-          $500
+          <div>Envío</div>
+          <div>$500</div>
         </div>
         <br>
         <hr>
         <div class="total-ctn">
-          Total <br>
-          5498
+          <div>Total</div>
+          <div> $5498</div>
         </div>
         <br>
-        <br>
-        <input type="submit" value="Finalizar Compra" />
+        
+        <button type="submit">Finalizar Compra
+
       </div>
     </div>
+
+    <%- include('../partials/footer') %>
   </body>
+  
 </html>
