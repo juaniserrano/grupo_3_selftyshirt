@@ -7,7 +7,7 @@
   list-style-type: none;
 }
 
-.box {
+ .box-header {
   height: 60px;
   flex-direction: row;
   background-color: black;
@@ -16,8 +16,8 @@
   justify-content: space-around;
   font-size: larger;
   margin: auto;
-  padding-top: 12px;
-}
+  padding-top: 0.8em;
+} 
 
 select {
   margin-left: 5px;
@@ -34,7 +34,7 @@ select option {
   color: black;
   cursor: pointer;
 }
-
+ 
 .currency i {
   background-color: black;
 }
@@ -196,6 +196,7 @@ a:visited {
 
 a {
   text-decoration: none;
+  background: none;
 }
 
 @keyframes display {
@@ -329,7 +330,7 @@ img:nth-child(3) {
     align-items: center;
   }
 
-  .buscar{
+  .buscar {
     bottom: 0.5vh;
   }
 }

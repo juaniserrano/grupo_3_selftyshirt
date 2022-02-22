@@ -8,6 +8,9 @@ const productController = require('../controllers/productsController')
 // Acá definimos las rutas --listo
 router.get('/cart', productController.cart);
 router.get('/detail', productController.detail);
-
+router.get('/products', productController.products);
+router.get('/newproduct', productController.create);
+router.get('/editproduct', productController.edit);
+router.get('/productcart', productController.cart);
 // Acá exportamos el resultado
 module.exports = router;

@@ -1,0 +1,117 @@
+<head>
+<%- include('../partials/head') %>
+    <link rel="stylesheet" href="css/productList.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/buttonStyle.css" />
+    <title> Productos - Selfty Shirt</title>
+  </head>
+
+  <body>
+
+    <body>
+      <%- include('../partials/header') %>
+    <main>
+      <div class="products-top-bar">
+        <h2>Productos</h2>
+        <p>Renueva tú estilo, expresa lo que quieras a través de nuestros diseños y muéstrales quién eres! </p>
+      </div>
+      <div class="wrapper">
+        <div class="box a">Filtros</div>
+        <div class="box b">
+          <div include="form-input-select()">
+            <select required>
+              <!--
+                This is how we can do "placeholder" options.
+                note: "required" attribute is on the select
+              -->
+              <option value=""
+                      hidden
+              >Ordenar por: </option>
+          
+              <!-- normal options -->
+              <option value="1">Precio mas Bajo a mas Alto</option>
+              <option value="2">Precio mas Alto a mas Bajo</option>
+              <option value="3">Ofertas</option>
+              <option value="4">Popular</option>
+              <option value="5">Nuevos Productos</option>
+            </select>
+          </div>
+
+        </div>
+        <div class="box c">
+
+
+
+          
+          <form>
+            <div class="categorias">
+            <h3>Categorias</h3>
+            <label><input type="checkbox" id="cbox1" value="first_checkbox"> Remeras</label>
+            <label><input type="checkbox" id="cbox1" value="first_checkbox"> Remeras</label>
+            <label><input type="checkbox" id="cbox1" value="first_checkbox"> Buzos</label>
+            <label><input type="checkbox" id="cbox1" value="first_checkbox"> Medias</label>
+            <label><input type="checkbox" id="cbox1" value="first_checkbox"> Gorros</label>
+          </div>
+          <div class="talle">
+            <h3>Talle</h3>
+            <label><input type="checkbox" id="cbox1" value="xs">XS</label>
+            <label><input type="checkbox" id="cbox1" value="s">S</label>
+            <label><input type="checkbox" id="cbox1" value="m">M</label>
+            <label><input type="checkbox" id="cbox1" value="l">L</label>
+            <label><input type="checkbox" id="cbox1" value="xl">XL</label>
+            <label><input type="checkbox" id="cbox1" value="xxl">XXL</label>
+            <label><input type="checkbox" id="cbox1" value="xxxl">XXXL</label>
+          </div>
+
+          </form>
+
+        </div>
+        <div class="box d">
+          <div class="box e">
+            <div class="item-image"><img src="images/image-remera1.png" alt="" class="img-product"/></div>
+            <div class="name-price-bottom">
+              <div class="item-name">Remera Negra 1</div>
+              <div class="item-price">$2000</div>
+            </div>
+          </div>
+          <a href="/detail">
+          <div class="box f">
+            <div class="item-image"><img src="images/image-remera1.png" alt="" class="img-product"/></div>
+            <div class="name-price-bottom">
+              <div class="item-name">Remera Negra 1</div>
+              <div class="item-price">$2000</div>
+            </div>
+          </div>
+        </a>
+          <div class="box g"><div class="item-image"><img src="images/image-remera1.png" alt="" class="img-product"/></div>
+          <div class="name-price-bottom">
+            <div class="item-name">Remera Negra 1</div>
+            <div class="item-price">$2000</div>
+          </div></div>
+          <div class="box h"><div class="item-image"><img src="images/image-remera1.png" alt="" class="img-product"/></div>
+          <div class="name-price-bottom">
+            <div class="item-name">Remera Negra 1</div>
+            <div class="item-price">$2000</div>
+          </div></div>
+          <div class="box i"><div class="item-image"><img src="images/image-remera1.png" alt="" class="img-product"/></div>
+          <div class="name-price-bottom">
+            <div class="item-name">Remera Negra 1</div>
+            <div class="item-price">$2000</div>
+          </div></div>
+          <div class="box j"><div class="item-image"><img src="images/image-remera1.png" alt="" class="img-product"/></div>
+            <div class="name-price-bottom">
+            <div class="item-name">Remera Negra 1</div>
+            <div class="item-price">$2000</div>
+            </div>
+          </div>
+          
+          
+          
+
+        </div>
+      </div>
+
+    </main>
+    <%- include('../partials/footer') %>
+  </body>
+</html>

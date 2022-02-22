@@ -18,7 +18,20 @@ const controller = {
   },
   detail: (req, res) => {
     res.render("products/productDetail.ejs");
+  },
+  products: (req, res) => {
+    res.render("products/productList.ejs");
+  },
+  create: (req, res) => {
+    res.render("products/productCreate.ejs");
+  },
+  edit: (req, res) => {
+    res.render("products/productEdit.ejs");
+  },
+  cart: (req, res) => {
+    res.render("products/productCart.ejs");
   }
+  
 };
 
 // Acá exportamos el resultado
