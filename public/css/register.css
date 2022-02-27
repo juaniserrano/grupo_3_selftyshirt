@@ -1,0 +1,41 @@
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.datos-registro {
+	text-align: center;
+	width: 70%;
+	padding-bottom: 2%;
+	background-color: var(--sh-background);
+}
+
+.datos-registro > h3 {
+	text-align: left;
+	font-size: 20px;
+	background-color: var(--sh-background);
+}
+
+.register {
+	flex-direction: column;
+	width: 40%;
+	color: black;
+	margin: auto;
+	padding-top: 5%;
+	border: 1.3px solid #222831;
+	margin-top: 5%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 10%;
+	background-color: var(--sh-background);
+}
+
+.register > form {
+	display: flex;
+	height: 70vh;
+	width: calc(100% - 10rem);
+	flex-direction: column;
+	background-color: var(--sh-background);
+	padding-top: 3px;
+}

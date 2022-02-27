@@ -1,0 +1,35 @@
+[
+	{
+		"id": 1,
+		"name": "Remera Negra",
+		"price": 1999.99,
+		"discount": 0,
+		"stockquantity": 15,
+		"category": "tshirt",
+		"description": "Remera negra clasica, no puede faltar en tu ropero.",
+		"color": "black",
+		"image": "image-remera1.png"
+	},
+	{
+		"id": 2,
+		"name": "remera Blanca",
+		"price": 2999.99,
+		"discount": 25,
+		"stockquantity": 29,
+		"category": "tshirt",
+		"description": "Remera blanca clasica, no puede faltar en tu ropero.",
+		"color": "white",
+		"image": "image-remera2.png"
+	},
+	{
+		"id": 3,
+		"name": "Remera Test",
+		"price": "5100",
+		"discount": 0,
+		"stockquantity": "100",
+		"category": "tshirt",
+		"description": "Ejemplo",
+		"color": "orange",
+		"image": "image-default-product.jpg"
+	}
+]

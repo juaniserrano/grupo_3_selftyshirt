@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+	<!-- Include Head -->
+	<%- include('../partials/head', {title: 'Crear product'}) %>
+	<link rel="stylesheet" href="/css/productCreate.css" />
+
+	<body>
+		<%- include('../partials/header') %>
+		<main>
+        <div class="row">
+          <h2 class="products-title">Formulario de creación de productos</h2>
+        </div>
+
+      <div class="col-12">
+        <form action="/products" method="POST" name = "newProduct" onsubmit = "return(validate());">
+          <div class="row product-detail">
+            <div class="col-12 col-md-6">
+              <label for="name" class="form-label">Nombre del producto:</label>
+              <input type="text" id="name" name="name" placeholder="Ej: Zapatillas Reebok" class="form-input">
+            </div>
+            <small id="nameHelpBlock" class="form-text text-muted">
+              Por ejemplo: Remera Negra
+              </small>
+            <div class="col-12 col-md-6">
+              <label for="price" class="form-label">Precio del producto:</label>
+              <input type="number" id="price" name="price" placeholder="Ej: 5100" class="form-input">
+              <small id="priceHelpBlock" class="form-text text-muted">
+              Por ejemplo: $2000
+              </small>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="col-12 col-md-6">
+                <label for="discount" class="form-label">Descuento:</label>
+                <input type="number" id="discount" name="discount" placeholder="Ej: 15" class="form-input">
+              </div>
+              <small id="discountHelpBlock" class="form-text text-muted">
+              Por ejemplo: %25
+              </small>
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="stockquantity" class="form-label">Cantidad:</label>
+              <input type="number" id="stockquantity" name="stockquantity" placeholder="Ej: 100" class="form-input">
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="category" class="form-label">Categoría:</label>
+              <select name="category" id="category" class="form-input">
+                <option value="tshirt">Remera</option>
+                <option value="hoodie">Buzo</option>
+                <option value="socks">Medias</option>
+              </select>
+            </div>
+            <div class="col-12">
+              <label for="description" class="form-label">Descipción:</label>
+              <textarea name="description" id="description" class="form-input"></textarea>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="buy-now-button">Guardar producto</button>
+            </div>
+          </div>
+        </form>
+		</main>
+		<%- include('../partials/footer') %>
+	</body>
+</html>

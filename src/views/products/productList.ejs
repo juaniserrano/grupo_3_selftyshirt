@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+	<!-- Include Head -->
+	<%- include('../partials/head', {title: 'Productos'}) %>
+  <link rel="stylesheet" href="css/productList.css" />
+
+  <body>
+    <%- include('../partials/header') %>
+    <main>
+      <div class="products-top-bar">
+        <h2>Productos</h2>
+        <p>
+          Renueva tú estilo, expresa lo que quieras a través de nuestros diseños
+          y muéstrales quién eres!
+        </p>
+      </div>
+      <div class="wrapper">
+        <div class="box a">Filtros</div>
+        <div class="box b">
+          <div include="form-input-select()">
+            <select required>
+              <!--
+                This is how we can do "placeholder" options.
+                note: "required" attribute is on the select
+              -->
+              <option value="" hidden>Ordenar por:</option>
+
+              <!-- normal options -->
+              <option value="1">Precio mas Bajo a mas Alto</option>
+              <option value="2">Precio mas Alto a mas Bajo</option>
+              <option value="3">Ofertas</option>
+              <option value="4">Popular</option>
+              <option value="5">Nuevos Productos</option>
+            </select>
+          </div>
+        </div>
+        <div class="box c">
+          <form>
+            <div class="categorias">
+              <h3>Categorias</h3>
+              <label
+                ><input type="checkbox" id="cbox1" value="first_checkbox" />
+                Remeras</label
+              >
+              <label
+                ><input type="checkbox" id="cbox1" value="first_checkbox" />
+                Remeras</label
+              >
+              <label
+                ><input type="checkbox" id="cbox1" value="first_checkbox" />
+                Buzos</label
+              >
+              <label
+                ><input type="checkbox" id="cbox1" value="first_checkbox" />
+                Medias</label
+              >
+              <label
+                ><input type="checkbox" id="cbox1" value="first_checkbox" />
+                Gorros</label
+              >
+            </div>
+            <div class="talle">
+              <h3>Talle</h3>
+              <label><input type="checkbox" id="cbox1" value="xs" />XS</label>
+              <label><input type="checkbox" id="cbox1" value="s" />S</label>
+              <label><input type="checkbox" id="cbox1" value="m" />M</label>
+              <label><input type="checkbox" id="cbox1" value="l" />L</label>
+              <label><input type="checkbox" id="cbox1" value="xl" />XL</label>
+              <label><input type="checkbox" id="cbox1" value="xxl" />XXL</label>
+              <label
+                ><input type="checkbox" id="cbox1" value="xxxl" />XXXL</label
+              >
+            </div>
+          </form>
+        </div>
+        <div class="box d">
+          <div class="box e">
+            <div class="container products-wrapper">
+              <div class="prod">
+                <div class="col">
+                  <h2 class="products-title">Todos los productos</h2>
+                </div>
+          
+                <% products.forEach(function(product){ 
+                  let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0)
+                %>
+                  <div class="col-12 col-sm-6 col-lg-3">
+                    <section class="product-box">
+                      <a href="/products/detail/<%= product.id %>">
+                        <figure class="product-box_image">
+                          <img src="/images/products/<%= product.image %>" alt="imagen de producto">
+                        </figure>
+                        <article class="product-box_data">
+                          <h2><%= toThousand(finalPrice) %></h2>
+                          <% if(parseInt(product.discount,10) > 0){%>
+                            <span style="color:red; font-weight:800; border: 1px solid red;"><%= product.discount %> %OFF</span>
+                          <%}%>
+                          <p><%= product.name %></p>
+                          <% if(parseInt(product.price,10) > 5000){%>
+                          <div style="color:green; font-weight:800">Envio GRATIS</div> <i class="fas fa-truck" style="color:green;"></i>
+                          <%}%>
+                          </article>
+                      </a>
+                    </section>
+                  </div>
+                  <% }) %>
+              
+              </div>
+        </div>
+      </div>
+
+      	<!-- todos los productos -->
+	</div>
+    </main>
+    <%- include('../partials/footer') %>
+  </body>
+</body>

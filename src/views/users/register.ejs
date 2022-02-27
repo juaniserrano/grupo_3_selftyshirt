@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+  <!-- Include Head -->
+  <%- include('../partials/head', {title: 'Registrarse'}) %>
+  <link rel="stylesheet" href="/css/register.css" />
+  <body>
+    <!-- Header -->
+    <%- include('../partials/header') %>
+
+  <body>
+    <main class="register">
+
+      <div class="datos-registro">
+        <img src = "/images/profile.svg" alt="SVG IMG"/>
+        <h2>Crear cuenta</h2>
+        <br/>
+        <h3>Datos de registro:</h3>
+      </div>
+      <form action="/" method="POST">
+        <input type="text" name="name" placeholder="Nombre" />
+        <br />
+        <input type="text" name="user" placeholder="Apellido" />
+        <br />
+        <input type="email" name="email" placeholder="Correo Electronico" />
+        <br />
+        <input type="password" name="pass" placeholder="Elegí tu contraseña" />
+        <br />
+        <input
+          type="password"
+          name="pass_confirm"
+          placeholder="Confirmá tu contraseña"
+        />
+        <br />
+        <br />
+        <input type="submit" value="Registrarse" />
+        <br />
+        ¿Ya tienes una cuenta? <a href="./login" class="a_top_hypers"><span style="color: blue;">Iniciar sesión</a>
+        <br />
+      </form>
+    </main>
+<%- include('../partials/footer') %>
+  </body>
+
+
+</html>

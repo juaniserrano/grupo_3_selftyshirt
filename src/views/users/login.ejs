@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+	<!-- Include Head -->
+	<%- include('../partials/head', {title: 'Iniciar sesión'}) %>
+  <link rel="stylesheet" href="/css/login.css" />
+
+  <body>
+    <!-- Header -->
+    <%- include('../partials/header') %>
+    <!-- /Header -->
+  <body>
+    <main class="register">
+
+      <div class="datos-registro">
+        <div class="logo-ctn">
+        <img src="/images/logo-orange-blue.png" alt="" class="pic" />
+      </div>
+        <h2>Bienvenido!</h2>
+        <h3>Ingresar con correo electronico:</h3>
+      </div>
+      <form action="/" method="POST">
+        <input type="email" name="email" placeholder="Correo Electronico" />
+        <br />
+        <input type="password" name="pass" placeholder="Contraseña" />
+        <br />
+        <br />
+        <div class="recordar-check"><label><input type="checkbox" id="remember" value="true"> Recordar mi cuenta</label></div>
+      </div>
+      <div class="google_button">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="">
+        <p>Continuar con Google</p>
+      </div>
+      <br>
+        <input type="submit" value="Ingresar" />
+        <br />
+        ¿No tienes una cuenta? <a href="../users/register" class="a_top_hypers"><span style="color: blue;">Regístrate</a>
+        <br />
+      </form>
+    </main>
+    <%- include('../partials/footer') %>
+  </body>
+</html>
