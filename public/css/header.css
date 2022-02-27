@@ -308,16 +308,6 @@ body {
 	.mobile-menu {
 		display: none;
 	}
-	header {
-		overflow: hidden !important;
-		position: fixed;
-		margin: 0 !important;
-		padding: 0 !important;
-		top: 0;
-		left: 0;
-		right: 0;
-		z-index: 99999999;
-	}
 
 	.bottom-header {
 		display: flex;
@@ -331,6 +321,9 @@ body {
 	}
 	.search-wrap .search {
 		width: max-content;
+	}
+	#navbar {
+		grid-auto-flow: row;
 	}
 }
 
