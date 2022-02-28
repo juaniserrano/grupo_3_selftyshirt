@@ -1,105 +1,52 @@
-main {
-	background-color: var(--sh-background);
+.product-img {
+	max-width: 100%;
+	height: auto;
+	align-self: center;
 }
 
-.wrapper {
-	display: grid;
-	gap: 10px;
-	grid-template-columns: 0.6fr 1fr 1fr 1fr;
-	/* grid-template-rows: 0.2fr 1fr 1fr 1fr; */
-	background-color: #fff;
-	color: #444;
-	justify-content: center;
-	margin: 4em 8em 4em 8em;
-	background-color: var(--sh-background);
-	/* grid-template-areas: ; */
+.card-img {
+	display: flex;
+	align-items: center;
 }
 
-.box c {
-	/*   background-color: #444;
-  color: black; */
-	border-radius: 5px;
-	padding: 20px;
-	font-size: 15px;
-	background-color: var(--sh-background);
+.products-top-bar {
+	background-color: black;
+	color: white;
+	font-size: 12px;
+	height: 100%;
+	padding: 2em;
 }
 
-.box {
-	border-radius: 4px;
+.product-box {
+	border: 2px solid black;
+	margin: 0.1em;
+	padding: 0.4em;
+	height: 100%;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	transition: background-color 2s ease-out 100ms;
+	min-width: 8em;
 }
 
 .product-box :hover {
-	transform: translateY(-5px);
-	box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
-	background-color: none;
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px rgb(0 0 0 / 0%);
+	position: relative;
 }
 
-.a {
-	grid-column: 1 / 2;
+.product-box_image {
+	max-height: 20rem;
+	max-width: 25em;
+	min-width: 15em;
 }
 
-.b {
-	grid-column: 4 /5;
+.row {
+	--bs-gutter-x: 0;
 }
 
-.c {
-	grid-column: 1;
-	grid-row: 2 / 4;
-}
-
-.d {
-	grid-column: 2 / 5;
-	display: grid;
-	grid-template-columns: repeat(3, auto);
-	grid-template-rows: repeat (3, 1fr);
-	grid-gap: 1em;
-	grid-auto-flow: row;
-}
-
-.e {
-	grid-row: 1;
-	grid-column: 1;
-	border: 2px solid black;
-	box-shadow: 5px 10px #888888;
-}
-
-.f {
-	grid-row: 1;
-	grid-column: 2;
-	border: 2px solid black;
-}
-
-.g {
-	grid-row: 1;
-	grid-column: 3;
-	border: 2px solid black;
-}
-
-.h {
-	grid-row: 2;
-	grid-column: 1;
-	border: 2px solid black;
-}
-
-.i {
-	grid-row: 2;
-	grid-column: 2;
-	border: 2px solid black;
-}
-
-.j {
-	grid-row: 2;
-	grid-column: 3;
-	border: 2px solid black;
-}
-
-.form-control {
-	font-family: system-ui, sans-serif;
-	font-size: 1.5rem;
-	font-weight: bold;
-	line-height: 1.1;
-	display: grid;
-	place-content: center;
+.col {
+	align-self: center;
 }
 
 /*CHECKBOX STYLE */
@@ -144,79 +91,22 @@ input[type='checkbox']:checked::before {
 	place-content: center;
 }
 
-.img-product {
-	height: auto;
-	width: auto;
-	max-width: 300px;
-	max-height: 300px;
-}
-
-.box-img {
-	width: 50%;
-	border: 5px solid black;
-}
-
-.container {
-	display: flex;
-	flex-direction: column;
-	margin: 1em;
-}
-
-.item-image {
-	place-self: center center;
-	justify-content: center;
-	display: flex;
-}
-
-.item-name {
-	width: 100%;
-	height: 100%;
-	text-align: start;
-	font-weight: bolder;
-}
-
-.item-price {
-	text-align: end;
-	color: cornflowerblue;
-}
-
-.name-price-bottom {
-	display: flex;
-	flex-direction: row;
-	-ms-flex-item-align: center;
-	font-size: 2.4vh;
-	padding-top: 1em;
-}
-
-.categorias label {
-	display: flex;
-	flex-direction: row;
-	padding: 0.7rem;
-}
-
+.categorias label,
 .talle label {
 	display: flex;
-	flex-direction: row;
-	padding: 0.7rem;
-	text-align: end;
+	align-items: center;
+	width: fit-content;
+	font-size: 1.4em;
 }
 
-#img {
-	height: auto;
-	width: auto;
+.form {
+	display: flex;
+	flex-direction: column;
+	width: 80%;
 }
 
-.products-top-bar {
-	background-color: black;
-	color: white;
-	height: 20%;
-	padding: 2em;
-}
-
-.products-top-bar h2,
-.products-top-bar p {
-	font-size: 2em;
-	background-color: black;
-	padding: 0.2em;
-	width: 50%;
+@media (max-width: 769px) {
+	.p-3 {
+		padding: 0.3rem !important;
+	}
 }

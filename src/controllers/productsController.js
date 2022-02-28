@@ -42,7 +42,6 @@ const controller = {
 		res.redirect('/products/detail/' + newProduct.id);
 	},
 
-	
 	cart: (req, res) => {
 		res.render('products/productCart');
 	},

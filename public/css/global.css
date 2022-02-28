@@ -4,6 +4,11 @@
 	padding: 0px;
 	box-sizing: border-box;
 	list-style-type: none;
+}
+
+html,
+body,
+header {
 	scroll-behavior: smooth;
 }
 

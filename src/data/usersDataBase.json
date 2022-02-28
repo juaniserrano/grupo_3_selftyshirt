@@ -1,0 +1,22 @@
+[
+	{
+		"id": 1,
+		"firstName": "Juan",
+		"lastName": "Serrano",
+		"email": "email@gmail.com",
+		"newsletter": true,
+		"password": "12345",
+		"cartProducts": {
+			"id": 1,
+			"name": "Remera Negra",
+			"price": 1999.99,
+			"discount": 0,
+			"stockquantity": 15,
+			"category": "tshirt",
+			"description": "Remera negra clasica, no puede faltar en tu ropero.",
+			"color": "black",
+			"image": "image-remera1.png"
+		},
+		"image": "default-avatar.jpg"
+	}
+]
