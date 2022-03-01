@@ -27,12 +27,20 @@
 	flex-direction: column;
 	transition: background-color 2s ease-out 100ms;
 	min-width: 8em;
+	background-color: white;
+	border-radius: 6px;
+	transition: box-shadow 0.3s;
+	position: relative;
+	z-index: 0;
 }
 
-.product-box :hover {
-	transform: perspective(1px) translateZ(0);
-	box-shadow: 0 0 1px rgb(0 0 0 / 0%);
-	position: relative;
+.row main {
+	background-color: #ededed;
+}
+
+.product-box:hover {
+	box-shadow: 0 25px 20px 0 rgba(0, 0, 0, 0.16), 0 -1px 2px 0 rgba(0, 0, 0, 0.1);
+	z-index: 2;
 }
 
 .product-box_image {
@@ -105,8 +113,70 @@ input[type='checkbox']:checked::before {
 	width: 80%;
 }
 
+.sale {
+	position: absolute;
+	display: inline-block;
+	background: red;
+	color: white;
+	height: 2.5rem;
+	width: 2.5rem;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 1.2rem;
+	transform: rotate(-20deg);
+	animation: beat 1.2s ease infinite alternate;
+	align-self: end;
+	z-index: 1;
+}
+.sale:before,
+.sale:after {
+	content: '';
+	position: absolute;
+	background: inherit;
+	height: inherit;
+	width: inherit;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	transform: rotate(30deg);
+}
+.sale:after {
+	transform: rotate(60deg);
+}
+
+.prodcuts {
+	padding-top: 1em;
+}
+
+@keyframes beat {
+	from {
+		transform: rotate(-20deg) scale(1);
+	}
+	to {
+		transform: rotate(-20deg) scale(1.1);
+	}
+}
+
 @media (max-width: 769px) {
 	.p-3 {
 		padding: 0.3rem !important;
+	}
+	.col-lg-2 {
+		border-bottom: 2px solid black;
+		border-right: 0 !important;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.categorias {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.talle {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
 }

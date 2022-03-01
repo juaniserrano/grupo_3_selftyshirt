@@ -31,5 +31,16 @@
 		"description": "Ejemplo",
 		"color": "orange",
 		"image": "image-default-product.jpg"
+	},
+	{
+		"id": 4,
+		"name": "Remera Cara y Con envio gratis",
+		"price": "9000000",
+		"discount": "25",
+		"stockquantity": "123",
+		"category": "tshirt",
+		"description": "asd",
+		"image": "image-default-product.jpg",
+		"color": "orange"
 	}
 ]
