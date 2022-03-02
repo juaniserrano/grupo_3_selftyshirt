@@ -6,6 +6,17 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
 
+function setImgDefault(product) {
+	if (product.category === 'socks') {
+		product.image = 'image-default-socks.jpg';
+	}
+	if (product.category === 'hoodie') {
+		product.image = 'image-default-hoodie.jpg';
+	} else {
+		product.image = 'image-default-products.jpg';
+	}
+}
+
 const controller = {
 	// Root - Show all products
 	index: (req, res) => {
@@ -37,6 +48,7 @@ const controller = {
 			image: 'image-default-product.jpg',
 			color: 'orange',
 		};
+		setImgDefault(newProduct);
 		products.push(newProduct);
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
 		res.redirect('/products/detail/' + newProduct.id);

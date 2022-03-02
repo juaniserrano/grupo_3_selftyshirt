@@ -7,57 +7,56 @@
 	<body>
 		<%- include('../partials/header') %>
 		<main>
+			<div class="col-11 col-lg-8">
+				<div class="title">
+					<h2 class="products-title">Formulario de creación de productos</h2>
+				</div>
+				<form action="/products" method="POST" name="newProduct" onsubmit="return(validate());">
+					<div class="row product-detail">
+						<div class="col-12 col-md-10">
+							<label for="name" class="form-label">Nombre del producto:</label>
+							<input type="text" id="name" name="name" placeholder="Ej: Zapatillas Reebok" class="form-input" />
+							<small id="nameHelpBlock" class="form-text text-muted">
+								<br />
+								Por ejemplo: Remera Negra
+							</small>
+						</div>
 
-      <div class="col-12">
-        <div class="title">
-          <h2 class="products-title">Formulario de creación de productos</h2>
-        </div>
-        <form action="/products" method="POST" name = "newProduct" onsubmit = "return(validate());">
-          <div class="row product-detail">
-            <div class="col-12 col-md-6">
-              <label for="name" class="form-label">Nombre del producto:</label>
-              <input type="text" id="name" name="name" placeholder="Ej: Zapatillas Reebok" class="form-input">
-            </div>
-            <small id="nameHelpBlock" class="form-text text-muted">
-              Por ejemplo: Remera Negra
-              </small>
-            <div class="col-12 col-md-6">
-              <label for="price" class="form-label">Precio del producto:</label>
-              <input type="number" id="price" name="price" placeholder="Ej: 5100" class="form-input">
-              <small id="priceHelpBlock" class="form-text text-muted">
-              Por ejemplo: $2000
-              </small>
-            </div>
-            <div class="col-12 col-md-6">
-              <div class="col-12 col-md-6">
-                <label for="discount" class="form-label">Descuento:</label>
-                <input type="number" id="discount" name="discount" placeholder="Ej: 15" class="form-input">
-              </div>
-              <small id="discountHelpBlock" class="form-text text-muted">
-              Por ejemplo: %25
-              </small>
-            </div>
-            <div class="col-12 col-md-6">
-              <label for="stockquantity" class="form-label">Cantidad:</label>
-              <input type="number" id="stockquantity" name="stockquantity" placeholder="Ej: 100" class="form-input">
-            </div>
-            <div class="col-12 col-md-6">
-              <label for="category" class="form-label">Categoría:</label>
-              <select name="category" id="category" class="form-input">
-                <option value="tshirt">Remera</option>
-                <option value="hoodie">Buzo</option>
-                <option value="socks">Medias</option>
-              </select>
-            </div>
-            <div class="col-12">
-              <label for="description" class="form-label">Descipción:</label>
-              <textarea name="description" id="description" class="form-input"></textarea>
-            </div>
-            <div class="col-12">
-              <button type="submit" class="btn btn-success">Guardar producto  <i class="fa-solid fa-floppy-disk"></i></button>
-            </div>
-          </div>
-        </form>
+						<div class="col-12 col-md-10">
+							<label for="price" class="form-label">Precio del producto:</label>
+							<input type="number" id="price" pattern="[0-9]" name="price" placeholder="Ej: 5100" class="form-input" />
+							<small id="priceHelpBlock" class="form-text text-muted"> Por ejemplo: $2000 (Solo ingresar la cantidad sin el $)</small>
+						</div>
+						<div class="col-12 col-md-10">
+							<label for="discount" class="form-label">Descuento:</label>
+							<input type="number" id="discount" pattern="[0-9]" name="discount" placeholder="Ej: 15" class="form-input" />
+							<small id="discountHelpBlock" class="form-text text-muted"> Por ejemplo: 25% (Solo ingresar la cantidad sin el %) </small>
+						</div>
+
+						<div class="col-12 col-md-10">
+							<label for="stockquantity" class="form-label">Cantidad:</label>
+							<input type="number" id="stockquantity" pattern="[0-9]" name="stockquantity" placeholder="Ej: 100" class="form-input" />
+							<small id="discountHelpBlock" class="form-text text-muted"> Ingresar la cantidad de productos que hay en stock </small>
+						</div>
+						<div class="col-12 col-md-10">
+							<label for="category" class="form-label">Categoría:</label>
+							<select name="category" id="category" class="form-input">
+								<option value="tshirt">Remera</option>
+								<option value="hoodie">Buzo</option>
+								<option value="socks">Medias</option>
+							</select>
+						</div>
+						<div class="col-12 col-md-10">
+							<label for="description" class="form-label">Descripción:</label>
+							<textarea name="description" id="description" class="form-input"></textarea>
+							<small id="discountHelpBlock" class="form-text text-muted"> Ejemplo: Remera con tela de primera calidad importada, Algodón 100% jersey 24/1 de textura suave y liviana </small>
+						</div>
+						<div class="button-green-class">
+							<button type="submit" class="button">Guardar producto <i class="fa-solid fa-floppy-disk"></i></button>
+						</div>
+					</div>
+				</form>
+			</div>
 		</main>
 		<%- include('../partials/footer') %>
 	</body>

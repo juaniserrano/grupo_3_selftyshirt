@@ -142,7 +142,7 @@ a {
 	padding: 0 0 1rem 0;
 }
 
-.button {
+.button-container > a:nth-child(1) .button {
 	width: 140px;
 	height: 65px;
 	font-size: 16px;
@@ -159,7 +159,7 @@ a {
 	outline: none;
 }
 
-.button:hover {
+.button-container > a:nth-child(1) .button:hover {
 	background-color: #222831;
 	box-shadow: 0px 15px 20px rgba(34, 40, 49, 0.5);
 	color: #fff;
