@@ -3,8 +3,10 @@
 	<!-- Include Head -->
 	<%- include('partials/head', {title: 'Inicio'}) %>
 	<body>
+		<div id="loading">
+			<img id="loading-image" src="/images/loading.gif" alt="Cargando..." />
+		</div>
 		<%- include('./partials/header') %>
-
 		<div class="content">
 			<div class="container-quote">
 				<blockquote class="blockquote text-center">
@@ -50,71 +52,72 @@
 			</div>
 		</div>
 
-		<div id="reviews"></h2>
-		<div class="container-reviews">
-			<div class="mgb-40 padb-30 auto-invert line-b-4 align-center">
-				<h4 class="font-cond-l fg-accent lts-md mgb-10" contenteditable="false">Aun no te convence?</h4>
-				<h1 class="font-cond-b fg-text-d lts-md fs-300 fs-300-xs no-mg" contenteditable="false">Mira lo que opinan nuestros clientes</h1>
+		<div id="reviews">
+			<div class="container-reviews">
+				<div class="mgb-40 padb-30 auto-invert line-b-4 align-center">
+					<h4 class="font-cond-l fg-accent lts-md mgb-10" contenteditable="false">Aun no te convence?</h4>
+					<h1 class="font-cond-b fg-text-d lts-md fs-300 fs-300-xs no-mg" contenteditable="false">Mira lo que opinan nuestros clientes</h1>
+				</div>
+				<ul class="hash-list cols-3 cols-1-xs pad-30-all align-center text-sm">
+					<li>
+						<img
+							src="./images/avatar/avatar1.jpg"
+							class="wpx-100 img-round mgb-20"
+							title=""
+							alt=""
+							data-edit="false"
+							data-editor="field"
+							data-field="src[Image Path]; title[Image Title]; alt[Image Alternate Text]"
+						/>
+						<div class="mx-auto" style="width: 9rem">
+							<div class="badge bg-dark text-wrap mgb-20">Compra Verificada <i class="fa-solid fa-circle-check" style="width: 1rem"></i></div>
+						</div>
+						<p class="fs-110 font-cond-l" contenteditable="false">
+							" Me encantaron las prendas que compré, la calidad es re buena me sorprendió. El envío súper rápido y hermoso empaquetado, 10/10, lo recomiendo sin duda alguna. "
+						</p>
+						<h5 class="font-cond mgb-5 fg-text-d fs-130" contenteditable="false">Maria Gimenez</h5>
+						<small class="font-cond case-u lts-sm fs-80 fg-text-l" contenteditable="false">Estudiante de Nutricion - Buenos Aires</small>
+					</li>
+					<li>
+						<img
+							src="./images/avatar/avatar2.jpg"
+							class="wpx-100 img-round mgb-20"
+							title=""
+							alt=""
+							data-edit="false"
+							data-editor="field"
+							data-field="src[Image Path]; title[Image Title]; alt[Image Alternate Text]"
+						/>
+						<div class="mx-auto" style="width: 9rem">
+							<div class="badge bg-dark text-wrap mgb-20">Compra Verificada <i class="fa-solid fa-circle-check" style="width: 1rem"></i></div>
+						</div>
+						<p class="fs-110 font-cond-l" contenteditable="false">
+							" Buena variedad de talles y colores, me encantaron los estampados. Las medidas están re bien y la calidad hermosa, muchas gracias. "
+						</p>
+						<h5 class="font-cond mgb-5 fg-text-d fs-130" contenteditable="false">Julian Alvarez</h5>
+						<small class="font-cond case-u lts-sm fs-80 fg-text-l" contenteditable="false">Musico - Cordoba</small>
+					</li>
+					<li>
+						<img
+							src="./images/avatar/avatar3.jpg"
+							class="wpx-100 img-round mgb-20"
+							title=""
+							alt=""
+							data-edit="false"
+							data-editor="field"
+							data-field="src[Image Path]; title[Image Title]; alt[Image Alternate Text]"
+						/>
+						<div class="mx-auto" style="width: 9rem">
+							<div class="badge bg-dark text-wrap mgb-20">Compra Verificada <i class="fa-solid fa-circle-check" style="width: 1rem"></i></div>
+						</div>
+						<p class="fs-110 font-cond-l" contenteditable="false">
+							" Divino todo, compré ropa para mi hermana y para mi, gracias por la inclusión en los talles, es muy difícil encontrar ropa linda y de mi talle hoy en día. Sigan así. "
+						</p>
+						<h5 class="font-cond mgb-5 fg-text-d fs-130" contenteditable="false">Sol Gracia</h5>
+						<small class="font-cond case-u lts-sm fs-80 fg-text-l" contenteditable="false">Content Creator - Santa Fe</small>
+					</li>
+				</ul>
 			</div>
-			<ul class="hash-list cols-3 cols-1-xs pad-30-all align-center text-sm">
-				<li>
-					<img
-						src="./images/avatar/avatar1.jpg"
-						class="wpx-100 img-round mgb-20"
-						title=""
-						alt=""
-						data-edit="false"
-						data-editor="field"
-						data-field="src[Image Path]; title[Image Title]; alt[Image Alternate Text]"
-					/>
-					<div class="mx-auto" style="width: 9rem">
-						<div class="badge bg-dark text-wrap mgb-20">Compra Verificada <i class="fa-solid fa-circle-check" style="width: 1rem"></i></div>
-					</div>
-					<p class="fs-110 font-cond-l" contenteditable="false">
-						" Me encantaron las prendas que compré, la calidad es re buena me sorprendió. El envío súper rápido y hermoso empaquetado, 10/10, lo recomiendo sin duda alguna. "
-					</p>
-					<h5 class="font-cond mgb-5 fg-text-d fs-130" contenteditable="false">Maria Gimenez</h5>
-					<small class="font-cond case-u lts-sm fs-80 fg-text-l" contenteditable="false">Estudiante de Nutricion - Buenos Aires</small>
-				</li>
-				<li>
-					<img
-						src="./images/avatar/avatar2.jpg"
-						class="wpx-100 img-round mgb-20"
-						title=""
-						alt=""
-						data-edit="false"
-						data-editor="field"
-						data-field="src[Image Path]; title[Image Title]; alt[Image Alternate Text]"
-					/>
-					<div class="mx-auto" style="width: 9rem">
-						<div class="badge bg-dark text-wrap mgb-20">Compra Verificada <i class="fa-solid fa-circle-check" style="width: 1rem"></i></div>
-					</div>
-					<p class="fs-110 font-cond-l" contenteditable="false">
-						" Buena variedad de talles y colores, me encantaron los estampados. Las medidas están re bien y la calidad hermosa, muchas gracias. "
-					</p>
-					<h5 class="font-cond mgb-5 fg-text-d fs-130" contenteditable="false">Julian Alvarez</h5>
-					<small class="font-cond case-u lts-sm fs-80 fg-text-l" contenteditable="false">Musico - Cordoba</small>
-				</li>
-				<li>
-					<img
-						src="./images/avatar/avatar3.jpg"
-						class="wpx-100 img-round mgb-20"
-						title=""
-						alt=""
-						data-edit="false"
-						data-editor="field"
-						data-field="src[Image Path]; title[Image Title]; alt[Image Alternate Text]"
-					/>
-					<div class="mx-auto" style="width: 9rem">
-						<div class="badge bg-dark text-wrap mgb-20">Compra Verificada <i class="fa-solid fa-circle-check" style="width: 1rem"></i></div>
-					</div>
-					<p class="fs-110 font-cond-l" contenteditable="false">
-						" Divino todo, compré ropa para mi hermana y para mi, gracias por la inclusión en los talles, es muy difícil encontrar ropa linda y de mi talle hoy en día. Sigan así. "
-					</p>
-					<h5 class="font-cond mgb-5 fg-text-d fs-130" contenteditable="false">Sol Gracia</h5>
-					<small class="font-cond case-u lts-sm fs-80 fg-text-l" contenteditable="false">Content Creator - Santa Fe</small>
-				</li>
-			</ul>
 		</div>
 
 		<%- include('./partials/footer') %>
@@ -125,5 +128,10 @@
 			crossorigin="anonymous"
 		></script>
 		<script src="./js/cookies.js"></script>
+		<script>
+			$(window).on('load', function () {
+				$('#loading').hide();
+			});
+		</script>
 	</body>
 </html>
