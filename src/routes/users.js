@@ -8,5 +8,7 @@ router.get('/register', usersController.register);
 
 router.post('/register', usersController.create);
 
+/*** GET ONE PRODUCT ***/
+router.get('/profile/:id', usersController.profile);
 
 module.exports = router;

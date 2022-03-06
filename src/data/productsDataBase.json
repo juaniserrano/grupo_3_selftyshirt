@@ -38,5 +38,15 @@
   "stockquantity": "123",
   "category": "hoodie",
   "description": "asd"
+ },
+ {
+  "id": "product-1f9mwy784l0frgzw3",
+  "image": "product-1646600581297.png",
+  "name": "a",
+  "price": "123",
+  "discount": "0",
+  "stockquantity": "123",
+  "category": "hoodie",
+  "description": "asdasdas"
  }
 ]

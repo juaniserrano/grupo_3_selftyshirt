@@ -1,0 +1,39 @@
+.profile-box {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	background: lightgray;
+	width: 90%;
+	border: 4px solid grey;
+	flex-direction: column;
+	padding: 2rem 0 2rem 0;
+	margin: 2rem 0 2rem 0;
+}
+
+.profile {
+	display: flex;
+	align-items: center;
+	align-content: center;
+	flex-direction: column;
+}
+.user-img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 3em;
+}
+
+#profile-name {
+	font-weight: 700;
+	font-size: 3em;
+	display: flex;
+	align-items: center;
+	align-content: center;
+	flex-direction: column;
+	align-self: center;
+}
+
+.user-img {
+	width: 40%;
+	height: auto;
+	border-radius: 3em;
+}

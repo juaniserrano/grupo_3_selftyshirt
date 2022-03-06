@@ -32,7 +32,7 @@ const usersController = {
 		};
 		users.push(newUser);
 		fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
-		res.redirect('/');
+		res.redirect('/users/profile/' + newUser.id);
 	},
 
 	// Eliminar un usuario
@@ -53,6 +53,14 @@ const usersController = {
 
 		//redirecciono al listado de usuarios
 		res.redirect('/users/list');
+	},
+
+	profile: function (req, res) {
+		let id = req.params.id;
+		let user = users.find((user) => user.id == id);
+		res.render('users/userDetail', {
+			user,
+		});
 	},
 };
 
