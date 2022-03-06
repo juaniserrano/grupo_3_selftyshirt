@@ -16,13 +16,10 @@ const usersController = {
 		let newUser = {
 			id: users[users.length - 1].id + 1,
 			...req.body,
-			image: 'default-avatar.jpg',
-			newsletter: true,
-			cartProducts: {},
 		};
 		users.push(newUser);
-		fs.writeFileSync(newUsers, JSON.stringify(users, null, ' '));
-		res.redirect('/user/profile/' + newUser.id);
+		fs.writeFileSync(newUser, JSON.stringify(users, null, ' '));
+		res.redirect('/' + newUser.id);
 	},
 };
 

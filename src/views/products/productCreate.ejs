@@ -1,25 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
 	<!-- Include Head -->
-	<%- include('../partials/head', {title: 'Crear product'}) %>
+	<%- include('../partials/head', {title: 'Crear producto'}) %>
 	<link rel="stylesheet" href="/css/productCreate.css" />
 
 	<body>
 		<%- include('../partials/header') %>
 		<main>
 			<div class="col-11 col-lg-8">
-				<div class="title">
-					<h2 class="products-title">Formulario de creación de productos</h2>
-				</div>
-				<form action="/products" method="POST" name="newProduct" onsubmit="return(validate());">
+				<h2 class="products-title">Formulario de creación de productos</h2>
+				<form action="/products/" method="POST" enctype="multipart/form-data">
 					<div class="row product-detail">
 						<div class="col-12 col-md-10">
 							<label for="name" class="form-label">Nombre del producto:</label>
 							<input type="text" id="name" name="name" placeholder="Ej: Zapatillas Reebok" class="form-input" />
-							<small id="nameHelpBlock" class="form-text text-muted">
-								<br />
-								Por ejemplo: Remera Negra
-							</small>
+							<small id="nameHelpBlock" class="form-text text-muted"> Por ejemplo: Remera Negra </small>
 						</div>
 
 						<div class="col-12 col-md-10">
@@ -50,6 +45,11 @@
 							<label for="description" class="form-label">Descripción:</label>
 							<textarea name="description" id="description" class="form-input"></textarea>
 							<small id="discountHelpBlock" class="form-text text-muted"> Ejemplo: Remera con tela de primera calidad importada, Algodón 100% jersey 24/1 de textura suave y liviana </small>
+						</div>
+						<div class="col-12 col-md-10">
+							<label for="imageproduct" class="form-label">Imagen:</label>
+							<input type="file" name="imageproduct" id="imageproduct" class="form-input" />
+							<small id="imageHelpBlock" class="form-text text-muted"> Imagen de hasta 2 mb </small>
 						</div>
 						<div class="button-green-class">
 							<button type="submit" class="button">Guardar producto <i class="fa-solid fa-floppy-disk"></i></button>

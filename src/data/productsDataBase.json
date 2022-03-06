@@ -1,112 +1,42 @@
 [
  {
-  "id": 1,
-  "name": "Remera Negra",
-  "price": 1999.99,
-  "discount": 0,
-  "stockquantity": 15,
+  "id": "product-1f9mwy8mcl0f0igyi",
+  "image": "product-1646555300440.png",
+  "name": "",
+  "price": "",
+  "discount": "",
+  "stockquantity": "",
   "category": "tshirt",
-  "description": "Remera negra clasica, no puede faltar en tu ropero.",
-  "color": "black",
-  "image": "image-remera1.png"
+  "description": ""
  },
  {
-  "id": 2,
-  "name": "remera Blanca",
-  "price": 2999.99,
-  "discount": 25,
-  "stockquantity": 29,
+  "id": "product-1f9mwy7q8l0f0kwaz",
+  "image": "product-1646555413641.png",
+  "name": "",
+  "price": "",
+  "discount": "",
+  "stockquantity": "",
   "category": "tshirt",
-  "description": "Remera blanca clasica, no puede faltar en tu ropero.",
-  "color": "white",
-  "image": "image-remera2.png"
+  "description": ""
  },
  {
-  "id": 3,
-  "name": "Remera Test",
-  "price": "5100",
-  "discount": 0,
-  "stockquantity": "100",
+  "id": "product-1f9mwy1bcl0f0mlwv",
+  "image": "product-1646555493485.png",
+  "name": "",
+  "price": "",
+  "discount": "",
+  "stockquantity": "",
   "category": "tshirt",
-  "description": "Ejemplo",
-  "color": "orange",
-  "image": "image-default-product.jpg"
+  "description": ""
  },
  {
-  "id": 4,
-  "name": "Remera Cara y Con envio gratis",
-  "price": "9000000",
-  "discount": "25",
-  "stockquantity": "123",
-  "category": "tshirt",
-  "description": "asd",
-  "image": "image-default-product.jpg",
-  "color": "orange"
- },
- {
-  "id": 5,
+  "id": "product-1f9mwy788l0fp8oa9",
+  "image": "product-1646596833776.png",
   "name": "asd",
   "price": "123",
-  "discount": "1",
+  "discount": "0",
   "stockquantity": "123",
   "category": "hoodie",
-  "description": "1",
-  "image": "image-default-product.jpg",
-  "color": "orange"
- },
- {
-  "id": 6,
-  "name": "a",
-  "price": "349900",
-  "discount": "1",
-  "stockquantity": "23",
-  "category": "socks",
-  "description": "23123",
-  "image": "image-default-product.jpg",
-  "color": "orange"
- },
- {
-  "id": 7,
-  "name": "123",
-  "price": "123",
-  "discount": "1",
-  "stockquantity": "123",
-  "category": "hoodie",
-  "description": "213",
-  "image": "image-default-product.jpg",
-  "color": "orange"
- },
- {
-  "id": 8,
-  "name": "Remera Test",
-  "price": "12312",
-  "discount": "1",
-  "stockquantity": "1",
-  "category": "socks",
-  "description": "asdad",
-  "image": "image-default-socks.jpg",
-  "color": "orange"
- },
- {
-  "id": 9,
-  "name": "sadasd",
-  "price": "123",
-  "discount": "1",
-  "stockquantity": "2",
-  "category": "hoodie",
-  "description": "asdas",
-  "image": "image-default-hoodie.jpg",
-  "color": "orange"
- },
- {
-  "id": 10,
-  "name": "Buzo",
-  "price": "12999",
-  "discount": "10",
-  "stockquantity": "90",
-  "category": "hoodie",
-  "description": "Buzo test",
-  "image": "image-default-hoodie.jpg",
-  "color": "orange"
+  "description": "asd"
  }
 ]
