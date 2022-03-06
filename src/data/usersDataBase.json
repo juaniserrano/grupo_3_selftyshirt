@@ -1,22 +1,86 @@
 [
-	{
-		"id": 1,
-		"firstName": "Juan",
-		"lastName": "Serrano",
-		"email": "email@gmail.com",
-		"newsletter": true,
-		"password": "12345",
-		"cartProducts": {
-			"id": 1,
-			"name": "Remera Negra",
-			"price": 1999.99,
-			"discount": 0,
-			"stockquantity": 15,
-			"category": "tshirt",
-			"description": "Remera negra clasica, no puede faltar en tu ropero.",
-			"color": "black",
-			"image": "image-remera1.png"
-		},
-		"image": "default-avatar.jpg"
-	}
+ {
+  "id": 1,
+  "firstName": "Juan",
+  "lastName": "Serrano",
+  "email": "email@gmail.com",
+  "newsletter": true,
+  "password": "12345",
+  "cartProducts": {
+   "id": 1,
+   "name": "Remera Negra",
+   "price": 1999.99,
+   "discount": 0,
+   "stockquantity": 15,
+   "category": "tshirt",
+   "description": "Remera negra clasica, no puede faltar en tu ropero.",
+   "color": "black",
+   "image": "image-remera1.png"
+  },
+  "image": "default-avatar.jpg"
+ },
+ {
+  "id": 2,
+  "firstName": "Evi",
+  "lastName": "Trompiz",
+  "email": "evitrompiz12@gmail.com",
+  "pass": "",
+  "pass_confirm": "",
+  "category": "user",
+  "image": ""
+ },
+ {
+  "id": 3,
+  "firstName": "Egli",
+  "lastName": "Almeida",
+  "email": "egli@gmail.com",
+  "pass": "4444",
+  "pass_confirm": "444",
+  "category": "user",
+  "image": ""
+ },
+ {
+  "id": 4,
+  "firstName": "Lou",
+  "lastName": "Mendez",
+  "email": "loum@gmail.com",
+  "pass": "5555",
+  "pass_confirm": "5555",
+  "category": "user",
+  "image": ""
+ },
+ {
+  "id": 5,
+  "firstName": "Nad",
+  "lastName": "tr",
+  "email": "erw@gmail.conm",
+  "pass": "5555",
+  "pass_confirm": "5555",
+  "category": "user",
+  "image": ""
+ },
+ {
+  "id": 6,
+  "firstName": "erer",
+  "lastName": "eretrt",
+  "email": "gsd@fsgmd",
+  "pass": "5555",
+  "pass_confirm": "5555",
+  "image": "default-avatar.jpg",
+  "newsletter": true,
+  "category": "user",
+  "cartProducts": {}
+ },
+ {
+  "id": 7,
+  "firstName": "evi",
+  "lastName": "Trompiz",
+  "email": "evitrompiz12@gmail.com",
+  "pass": "12345",
+  "pass_confirm": "12345",
+  "image": "default-avatar.jpg",
+  "newsletter": true,
+  "category": "user",
+  "cartProducts": {}
+ }
 ]

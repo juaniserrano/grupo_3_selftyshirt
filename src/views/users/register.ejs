@@ -16,20 +16,27 @@
         <br/>
         <h3>Datos de registro:</h3>
       </div>
-      <form action="/" method="POST">
-        <input type="text" name="name" placeholder="Nombre" />
+      <form action="/users/register" method="POST">
+        <input type="name" name="firstName" placeholder="Nombre" />
         <br />
-        <input type="text" name="user" placeholder="Apellido" />
+        <input type="name" name="lastName" placeholder="Apellido" />
         <br />
         <input type="email" name="email" placeholder="Correo Electronico" />
         <br />
         <input type="password" name="pass" placeholder="Elegí tu contraseña" />
         <br />
-        <input
-          type="password"
-          name="pass_confirm"
-          placeholder="Confirmá tu contraseña"
-        />
+        <input type="password" name="pass_confirm" placeholder="Confirmá tu contraseña" />
+        <br />
+
+        <!--
+        <input type="text" name="category" placeholder="Categoría" /> <!--Esto es para colocar si es user o admin, toca hacer un middleware-->
+        -->
+
+        <br />
+        <label for="image" class="form-label">Elegí tú Imagen:</label>
+        <br />
+        <input type="file" name="image" placeholder="" accept=".jpg" />
+        <br />
         <br />
         <br />
         <input type="submit" value="Registrarse" />
