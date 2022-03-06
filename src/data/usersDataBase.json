@@ -82,5 +82,29 @@
   "newsletter": true,
   "category": "user",
   "cartProducts": {}
+ },
+ {
+  "id": 8,
+  "firstName": "Nuevo",
+  "lastName": "New",
+  "email": "new@dfsgda",
+  "pass": "7777",
+  "pass_confirm": "7777",
+  "image": "default-avatar.jpg",
+  "newsletter": true,
+  "category": "user",
+  "cartProducts": {}
+ },
+ {
+  "id": "user-1mumfk8xgl0fra2y0",
+  "firstName": "gdsadga",
+  "lastName": "fasafafa",
+  "email": "qeweq@jgj",
+  "pass": "0000",
+  "pass_confirm": "0000",
+  "image": "default-avatar.jpg",
+  "newsletter": true,
+  "category": "user",
+  "cartProducts": {}
  }
 ]

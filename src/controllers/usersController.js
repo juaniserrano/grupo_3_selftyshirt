@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+var uniqid = require('uniqid');
 
 const usersFilePath = path.join(__dirname, '../data/usersDataBase.json');
 
@@ -22,7 +23,7 @@ const usersController = {
 	// Create -  Method to user
 	create: (req, res) => {
 		let newUser = {
-			id: users[users.length - 1].id + 1,
+			id: uniqid('user-'),
 			...req.body,
 			newsletter: true,
 			category: 'user',
