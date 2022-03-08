@@ -8,20 +8,23 @@
 		<!-- Header -->
 		<%- include('../partials/header') %>
 		<!-- /Header -->
-		<body>
-			<main>
-				<div class="profile">
-					<div class="profile-box">
-						<div class="row">
-							<div class="col-sm-8" id="profile-name">Hola, <%= user.firstName %> <%= user.lastName %> !</div>
-							<div class="col-sm-4"><img src="/images/avatar/<%= user.image %>" alt="user image" class="user-img" /></div>
-							<div class="col-sm-8">Su email es: <%= user.email %></div>
-							<div class="col-sm-4"><button type="button" class="btn btn-success">Editar Perfil</button> <button type="button" class="btn btn-danger">ELIMINAR</button></div>
+		<main>
+			<div class="profile">
+				<div class="profile-box">
+					<div class="row">
+						<div class="col" id="profile-name">Hola, <%= user.firstName %> <%= user.lastName %> !</div>
+						<div class="col"><img src="/images/avatar/<%= user.image %>" alt="user image" class="user-img" /></div>
+					</div>
+					<div class="row">
+						<div class="col">Su email es: <%= user.email %></div>
+						<div class="col">
+							<button type="button" class="btn btn-success">Editar Perfil</button>
+							<button type="button" class="btn btn-danger">ELIMINAR</button>
 						</div>
 					</div>
 				</div>
-			</main>
-			<%- include('../partials/footer') %>
-		</body>
+			</div>
+		</main>
+		<%- include('../partials/footer') %>
 	</body>
 </html>

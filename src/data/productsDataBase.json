@@ -1,52 +1,72 @@
 [
  {
-  "id": "product-1f9mwy8mcl0f0igyi",
-  "image": "product-1646555300440.png",
-  "name": "",
-  "price": "",
-  "discount": "",
-  "stockquantity": "",
+  "id": "product-1f9mwy8rkl0ijeq8r",
+  "image": "product-1646768437079.jpg",
+  "name": "Remera Coffee or Beer",
+  "price": "3999",
+  "discount": "10",
+  "stockquantity": "20",
   "category": "tshirt",
-  "description": ""
+  "description": "Remera con tela de primera calidad importada, Algodón 100% jersey 24/1 de textura suave y liviana."
  },
  {
-  "id": "product-1f9mwy7q8l0f0kwaz",
-  "image": "product-1646555413641.png",
-  "name": "",
-  "price": "",
-  "discount": "",
-  "stockquantity": "",
+  "id": "product-1f9mwy8rkl0ijhmyq",
+  "image": "product-1646768572801.jpg",
+  "name": "Medias Hello World",
+  "price": "900",
+  "discount": "5",
+  "stockquantity": "30",
+  "category": "socks",
+  "description": "Medias con tela de primera calidad importada, super comodas ideales para cualquier uso"
+ },
+ {
+  "id": "product-1f9mwy8rkl0ip2oah",
+  "image": "product-1646777988370.png",
+  "name": "Buzo Full Stack",
+  "price": "9999",
+  "discount": "20",
+  "stockquantity": "60",
   "category": "tshirt",
-  "description": ""
+  "description": "Buzo con tela de primera calidad importada, Algodón 100% jersey 24/1 de textura suave y liviana "
  },
  {
-  "id": "product-1f9mwy1bcl0f0mlwv",
-  "image": "product-1646555493485.png",
-  "name": "",
-  "price": "",
-  "discount": "",
-  "stockquantity": "",
+  "id": "product-1f9mwy8rkl0ip6lfd",
+  "image": "product-1646778135288.jpg",
+  "name": "Remera Debugging",
+  "price": "6000",
+  "discount": "5",
+  "stockquantity": "90",
   "category": "tshirt",
-  "description": ""
+  "description": "Remera con tela de primera calidad importada, Algodón 100% jersey 24/1 de textura suave y liviana "
  },
  {
-  "id": "product-1f9mwy788l0fp8oa9",
-  "image": "product-1646596833776.png",
-  "name": "asd",
-  "price": "123",
-  "discount": "0",
-  "stockquantity": "123",
-  "category": "hoodie",
-  "description": "asd"
+  "id": "product-1f9mwy8rkl0ipl9hh",
+  "image": "product-1646778819653.webp",
+  "name": "Remera CSS de mi HTML 👫",
+  "price": "6000",
+  "discount": "10",
+  "stockquantity": "20",
+  "category": "tshirt",
+  "description": "Remera con tela de primera calidad importada, Algodón 100% jersey 24/1 de textura suave y liviana "
  },
  {
-  "id": "product-1f9mwy784l0frgzw3",
-  "image": "product-1646600581297.png",
-  "name": "a",
-  "price": "123",
-  "discount": "0",
-  "stockquantity": "123",
-  "category": "hoodie",
-  "description": "asdasdas"
+  "id": "product-1f9mwy8rkl0ipps36",
+  "image": "product-1646779078202.png",
+  "name": "Remera condicional Pandemia",
+  "price": "4000",
+  "discount": "50",
+  "stockquantity": "2",
+  "category": "tshirt",
+  "description": "Remera con tela de primera calidad importada, Algodón 100% jersey 24/1 de textura suave y liviana "
+ },
+ {
+  "id": "product-1f9mwy8rkl0ipxe2t",
+  "image": "product-1646779385475.jpg",
+  "name": "Remera Roses Blue unexpected '{'",
+  "price": "7000",
+  "discount": "40",
+  "stockquantity": "40",
+  "category": "tshirt",
+  "description": "Remera con tela de primera calidad importada, Algodón 100% jersey 24/1 de textura suave y liviana "
  }
 ]

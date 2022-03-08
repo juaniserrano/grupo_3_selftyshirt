@@ -8,13 +8,13 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
 
 function setImgDefault(product) {
-	if ((product.image = '' && product.category === 'socks')) {
+	if (product.category === 'socks') {
 		product.image = 'image-default-socks.jpg';
 	}
-	if ((product.image = '' && product.category === 'hoodie')) {
+	if (product.category === 'hoodie') {
 		product.image = 'image-default-hoodie.jpg';
 	}
-	if ((product.image = '' && product.category === 'tshirt')) {
+	if (product.category === 'tshirt') {
 		product.image = 'image-default-tshirt.jpg';
 	}
 }
@@ -46,14 +46,14 @@ const controller = {
 	store: (req, res) => {
 		let newProduct = {
 			id: uniqid('product-'),
-			image:'',
+			image: '',
 			...req.body,
 		};
-		if (req.file.filename.length > 3) {
+		if (!req.file) {
+			console.log('No file received');
+			setImgDefault(newProduct);
+		} else {
 			newProduct.image = req.file.filename;
-		}
-		if (req.file.filename.length < 3){
-			newProduct.image = 'image-default-tshirt.jpg';
 		}
 		products.push(newProduct);
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
@@ -74,20 +74,19 @@ const controller = {
 		let id = req.params.id;
 		let productToEdit = products.find((product) => product.id == id);
 
-		productToEdit = {
-			id: productToEdit.id,
-			...req.body,
-			image: productToEdit.image,
-		};
-		let newProducts = products.map((product) => {
-			if (product.id == productToEdit.id) {
-				return (product = { ...productToEdit });
-			}
-			return product;
-		});
+		productToEdit.name = req.body.name;
+		productToEdit.description = req.body.description;
+		productToEdit.price = req.body.price;
+		productToEdit.discount = req.body.discount;
+		productToEdit.stockquantity = req.body.stockquantity;
+		if (!req.file) {
+			console.log('No file received');
+		} else {
+			productToEdit.image = req.file.filename;
+		}
 
-		fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, ' '));
-		res.redirect('/');
+		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
+		res.redirect('/products/detail/' + productToEdit.id);
 	},
 
 	// Delete - Delete one product from DB
@@ -95,7 +94,7 @@ const controller = {
 		let id = req.params.id;
 		let finalProducts = products.filter((product) => product.id != id);
 		fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, ' '));
-		res.redirect('/');
+		res.redirect('/products');
 	},
 };
 

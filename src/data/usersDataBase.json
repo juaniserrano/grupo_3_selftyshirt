@@ -214,5 +214,17 @@
   "newsletter": true,
   "category": "user",
   "cartProducts": {}
+ },
+ {
+  "id": "user-1f9mwy9w0l0h356c7",
+  "firstName": "",
+  "lastName": "",
+  "email": "",
+  "pass": "7dJNimsnRTCyRdr",
+  "pass_confirm": "",
+  "image": "default-avatar.jpg",
+  "newsletter": true,
+  "category": "user",
+  "cartProducts": {}
  }
 ]

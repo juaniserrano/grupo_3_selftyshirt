@@ -73,6 +73,7 @@
 												</figure>
 											</section>
 											<article class="product-box_data">
+												<div class="priceStrike"><del>$<%=product.price %></del></div>
 												<h2>$ <%= toThousand(finalPrice) %></h2>
 												<p><%= product.name %></p>
 												<% if(parseInt(product.price,10) > 5000){%>

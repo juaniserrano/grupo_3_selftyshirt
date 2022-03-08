@@ -1,6 +1,6 @@
 .product-img {
 	max-width: 100%;
-	height: auto;
+	max-height: 25rem;
 	align-self: center;
 }
 
@@ -15,6 +15,11 @@
 	font-size: 12px;
 	height: 100%;
 	padding: 2em;
+}
+
+.priceStrike {
+	color: grey;
+	text-decoration: line-through;
 }
 
 .product-box {

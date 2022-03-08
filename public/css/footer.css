@@ -60,6 +60,12 @@
     =========================================================================================
     */
 
+#footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
 .footer-wrap {
 	padding-top: 43px;
 	background-size: cover;
