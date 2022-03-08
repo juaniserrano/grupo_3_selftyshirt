@@ -67,7 +67,7 @@ const controller = {
 	edit: (req, res) => {
 		let id = req.params.id;
 		let productToEdit = products.find((product) => product.id == id);
-		res.render('products/productedit', { productToEdit });
+		res.render('products/productEdit', { productToEdit });
 	},
 	// Update - Method to update
 	update: (req, res) => {
@@ -94,7 +94,7 @@ const controller = {
 		let id = req.params.id;
 		let finalProducts = products.filter((product) => product.id != id);
 		fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, ' '));
-		res.redirect('/products');
+		res.redirect('/');
 	},
 };
 
