@@ -2,14 +2,21 @@
 	"name": "grupo-3-selftyshirt",
 	"version": "0.0.0",
 	"private": true,
-	"license": "ISC",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/juaniserrano/grupo_3_selftyshirt"
-	},
+	"main": "app.js",
 	"scripts": {
 		"start": "nodemon -e js ./src/bin/www"
 	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/juaniserrano/grupo_3_selftyshirt"
+	},
+	"keywords": [
+		"clothing",
+		"tshirt",
+		"costume"
+	],
+	"author": "grupo3",
+	"license": "ISC",
 	"dependencies": {
 		"cookie-parser": "~1.4.4",
 		"debug": "~2.6.9",
