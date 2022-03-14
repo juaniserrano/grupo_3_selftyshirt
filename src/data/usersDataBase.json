@@ -226,5 +226,17 @@
   "newsletter": true,
   "category": "user",
   "cartProducts": {}
+ },
+ {
+  "id": "user-rbmvnb0ml0q5im6y",
+  "firstName": "aaasdsdsd",
+  "lastName": "",
+  "email": "",
+  "pass": "",
+  "pass_confirm": "",
+  "newsletter": true,
+  "category": "user",
+  "cartProducts": {},
+  "image": "default-avatar.jpg"
  }
 ]

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+	<!-- Include Head -->
+	<%- include('../partials/head', {title: 'Lista de usuarios'}) %>
+	<link rel="stylesheet" href="/css/userList.css" />
+
+
+	<body>
+		<!-- Header -->
+		<%- include('../partials/header') %>
+		<!-- /Header -->
+		<main>
+            <div class="listTable">
+                <caption>Listado de Usuarios</caption>
+            <table>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Apellido</th>
+                  <th>Ultima conexion</th>
+                  <th>Correo electronico</th>
+                  <th>Acciones</th>
+                </tr>
+                <% users.forEach(function(user){%>
+                <tr>
+                    <td><%= user.firstName %></td>
+                    <td><%= user.lastName %></td>
+                    <td><%= user.email %></td>
+                    <td><%= user.id %></td>
+                    <td><a href="/users/delete/<%=user.id%>">Eliminar <i class="fa fa-trash" aria-hidden="true"></i></a> <a href="users/edit/<%= user.id %> ">Modificar<i class="fa-solid fa-pen-to-square"></i></a><a href="/users/profile/<%= user.id %>">Ver Perfil <i class="fa-solid fa-user"></i></a></td>
+                </tr>
+                <%})%>
+            </div>
+        </main>
+    </body>

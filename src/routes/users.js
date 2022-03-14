@@ -11,4 +11,8 @@ router.post('/register', usersController.create);
 /*** GET ONE PRODUCT ***/
 router.get('/profile/:id', usersController.profile);
 
+router.get('/list', usersController.list);
+
+router.delete('/delete/:id', usersController.destroy);
+
 module.exports = router;

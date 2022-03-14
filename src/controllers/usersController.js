@@ -37,21 +37,9 @@ const usersController = {
 
 	// Eliminar un usuario
 	destroy: function (req, res) {
-		//obtengo todos los usuarios
-		let users = findAll();
-
-		//busco el usuario y obtengo su indice
-		let userIndex = users.findIndex(function (usuario) {
-			return usuario.id == req.params.id;
-		});
-
-		//elimino el usuario que busque, pasando su indice
-		users.splice(usersIndex, 1);
-
-		//modifico mi base de datos
-		writeFile(users);
-
-		//redirecciono al listado de usuarios
+		let id = req.params.id;
+		let finalUsers = users.filter((user) => user.id != id);
+		fs.writeFileSync(usersFilePath, JSON.stringify(finalUsers, null, ' '));
 		res.redirect('/users/list');
 	},
 
@@ -62,6 +50,11 @@ const usersController = {
 			user,
 		});
 	},
+	list: function (req, res) {
+		res.render('users/userList', {
+			users,
+		})
+	}
 };
 
 // Acá exportamos el resultado
