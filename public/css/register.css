@@ -5,7 +5,6 @@ img {
 
 .datos-registro {
 	text-align: center;
-	width: 70%;
 	padding-bottom: 2%;
 	background-color: var(--sh-background);
 }
@@ -16,26 +15,39 @@ img {
 	background-color: var(--sh-background);
 }
 
-.register {
+.register{
+	margin-top: 1.2rem;
+}
+
+.register .container {
 	flex-direction: column;
-	width: 40%;
 	color: black;
 	margin: auto;
-	padding-top: 5%;
 	border: 1.3px solid #222831;
-	margin-top: 5%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin-bottom: 10%;
+	margin-bottom: 5rem;
 	background-color: var(--sh-background);
+
 }
 
-.register > form {
+.register img{
+	max-width: 35%;
+}
+
+.register form {
+	    margin:auto;
+    display: inline-block;
 	display: flex;
-	height: 70vh;
-	width: calc(100% - 10rem);
 	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 	background-color: var(--sh-background);
-	padding-top: 3px;
+	width: 100%;
+}
+
+.register form > input{
+	width: 80%;
+	padding: 3px;
 }

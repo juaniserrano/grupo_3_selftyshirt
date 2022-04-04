@@ -10,24 +10,23 @@
   <body>
     <main class="register">
 
-      <div class="datos-registro">
+      <div class="container">
         <img src = "/images/profile.svg" alt="SVG IMG"/>
         <h2>Crear cuenta</h2>
+        <% if (locals.errors){ %> 
+          <% errors.forEach(error => { %>
+          <div class="alert alert-danger" role="alert">
+            <%= error.msg %>
+</div>
+        <% }); %> 
+        <% } %> 
         <br/>
         <h3>Datos de registro:</h3>
-      </div>
       <form action="/users/register" method="POST">
         <input type="name" name="firstName" placeholder="Nombre" />
-        <br />
-        <input type="name" name="lastName" placeholder="Apellido" />
-        <br />
+        <input type="name" name="lastName" placeholder="Apellido" value="<%= locals.old && old.lastName ? old.lastName : "" %>" />
         <input type="email" name="email" placeholder="Correo Electronico" />
-        <br />
-        <input type="password" name="pass" placeholder="Elegí tu contraseña" />
-        <br />
-        <input type="password" name="pass_confirm" placeholder="Confirmá tu contraseña" />
-        <br />
-
+        <input type="password" name="password" placeholder="Elegí tu contraseña" />
         <!--
         <input type="text" name="category" placeholder="Categoría" /> <!--Esto es para colocar si es user o admin, toca hacer un middleware-->
         -->
@@ -44,6 +43,7 @@
         ¿Ya tienes una cuenta? <a href="./login" class="a_top_hypers"><span style="color: blue;">Iniciar sesión</a>
         <br />
       </form>
+      </div>
     </main>
 <%- include('../partials/footer') %>
   </body>

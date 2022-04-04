@@ -238,5 +238,29 @@
   "category": "user",
   "cartProducts": {},
   "image": "default-avatar.jpg"
+ },
+ {
+  "id": "user-1f9mwyc10l11lrojw",
+  "firstName": "",
+  "lastName": "",
+  "email": "",
+  "pass": "7dJNimsnRTCyRdr",
+  "pass_confirm": "",
+  "image": "default-avatar.jpg",
+  "newsletter": true,
+  "category": "user",
+  "cartProducts": {}
+ },
+ {
+  "id": "user-1f9mwy3pcl15c9nux",
+  "firstName": "juan",
+  "lastName": "serrano",
+  "email": "ashdjkas@gmail.com",
+  "password": "$2a$10$G1cCm1JaznnxpNLelnXRPeItShFG3kKvlOgVD7nJ/rMlAnUX1en2e",
+  "password_confirm": "asdasd",
+  "image": "default-avatar.jpg",
+  "newsletter": true,
+  "category": "user",
+  "cartProducts": {}
  }
 ]
