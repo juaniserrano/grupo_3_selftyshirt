@@ -262,5 +262,16 @@
   "newsletter": true,
   "category": "user",
   "cartProducts": {}
+ },
+ {
+  "id": "user-1mumfkhrkl1k1v98g",
+  "firstName": "evit",
+  "lastName": "erret",
+  "email": "sdads@gmail.com",
+  "password": "$2a$10$Yun3t6aZQ6CrRc1drJbhnuNL.16zY9NxMlCneyY8tB0Iq/jXS7uZK",
+  "category": "user",
+  "image": "default-avatar.jpg",
+  "newsletter": true,
+  "cartProducts": {}
  }
 ]

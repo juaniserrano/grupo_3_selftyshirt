@@ -35,7 +35,7 @@ const usersController = {
 		let newUser = {
 			id: uniqid('user-'),
 			...req.body,
-			password: bcrypt.hashSync(req.body.password, 10),
+			password: bcrypt.hashSync(req.body.password, 10),  //Encrypt password
 			newsletter: true,
 			category: 'user',
 			cartProducts: {},

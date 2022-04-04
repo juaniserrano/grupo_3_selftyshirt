@@ -27,10 +27,12 @@
         <input type="name" name="lastName" placeholder="Apellido" value="<%= locals.old && old.lastName ? old.lastName : "" %>" />
         <input type="email" name="email" placeholder="Correo Electronico" />
         <input type="password" name="password" placeholder="Elegí tu contraseña" />
-        <!--
-        <input type="text" name="category" placeholder="Categoría" /> <!--Esto es para colocar si es user o admin, toca hacer un middleware-->
-        -->
-
+  
+         <!--Esto es para colocar si es user o admin, toca hacer un middleware-->
+        <label>Categoria: </label> <select name="role">
+          <option value="user">Usuario</option>
+          <option value="admin">Administrador</option>
+        </select>
         <br />
         <label for="image" class="form-label">Elegí tú Imagen:</label>
         <br />
