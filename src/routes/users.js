@@ -5,6 +5,8 @@ const multer = require('multer');
 const usersController = require('../controllers/usersController');
 const path = require('path');
 const validationForm = require('../../validator/validationForm');
+const userMiddleware = require('../middlewares/userMiddleware');
+const adminMiddleware = require('../middlewares/adminMiddleware');
 
 const storage = multer.diskStorage({
 	destination: (req, file, cb) => {
@@ -36,7 +38,7 @@ router.post('/register', upload.single('avatar'), validationForm.register, users
 /*** GET ONE USER ***/
 router.get('/profile/:id', usersController.profile);
 
-router.get('/list', usersController.list);
+router.get('/list', adminMiddleware, usersController.list);
 
 router.delete('/delete/:id', usersController.destroy);
 

@@ -10,6 +10,9 @@ var app = express();
 var session = require('express-session')
 const locals = require('./middlewares/locals.js');
 const remember = require('./middlewares/rememberMiddleware');
+const adminMiddleware = require('./middlewares/adminMiddleware');
+const userMiddleware = require('./middlewares/userMiddleware');
+const guestMiddleware = require('./middlewares/guestMiddleware');
 // ************ WRITE YOUR CODE FROM HERE ************
 // ************ Route System require and use() ************
 const mainRouter = require('./routes/index'); // Rutas main
@@ -31,6 +34,11 @@ app.use(
 		saveUninitialized: true,
 	})
 );
+
+// app.use((req, res, next) => {
+//   console.log(req.session)
+//   next()
+// })
 
 // ************ Middlewares - (don't touch) ************
 app.use(express.static(path.join(__dirname, '../public'))); // Necesario para los archivos estáticos en el folder /public

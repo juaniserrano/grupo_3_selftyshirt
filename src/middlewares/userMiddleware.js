@@ -3,5 +3,5 @@ module.exports = (req, res, next) => {
   if (req.session.usuarioLogueado.category === 'user') {
     return next();
   }
-  return res.redirect('/');
+  return res.redirect('/login');
 }

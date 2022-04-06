@@ -489,5 +489,17 @@
         "category": "user",
         "cartProducts": {},
         "avatar": "user-1649221644346.jpg"
+    },
+    {
+        "id": "user-1f9mwy11ol1o1pd9r",
+        "firstName": "admin",
+        "lastName": "admin",
+        "email": "admin@gmail.com",
+        "password": "$2a$10$nGet564IFSvEkmmn7WuVmemLVqoncofCRKm1w3JsBwK8c/HBYQ1o.",
+        "role": "admin",
+        "newsletter": true,
+        "category": "admin",
+        "cartProducts": {},
+        "avatar": "user-1649278279774.jpg"
     }
 ]
