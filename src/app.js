@@ -8,6 +8,29 @@ const methodOverride = require('method-override'); // Pasar poder usar los méto
 const logMiddleware = require('./middlewares/logMiddleware');
 var app = express();
 var session = require('express-session')
+const locals = require('./middlewares/locals.js');
+const remember = require('./middlewares/rememberMiddleware');
+// ************ WRITE YOUR CODE FROM HERE ************
+// ************ Route System require and use() ************
+const mainRouter = require('./routes/index'); // Rutas main
+const productsRouter = require('./routes/products'); // Rutas /products
+const usersRouter = require('./routes/users'); // Rutas /users
+
+
+
+// app.use(session({secret: 'Shhh, secreto!!'}));
+// ************ Template Engine / View Engine Setup - (don't touch) ************
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, '/views')); // Define la ubicación de la carpeta de las Vistas
+
+
+app.use(
+	session({
+		secret: 'keyboard cat',
+		resave: false,
+		saveUninitialized: true,
+	})
+);
 
 // ************ Middlewares - (don't touch) ************
 app.use(express.static(path.join(__dirname, '../public'))); // Necesario para los archivos estáticos en el folder /public
@@ -17,18 +40,12 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
 
+
 //middlewares custom
 app.use(logMiddleware);
-app.use(session({secret: 'Shhh, secreto!!'}));
-// ************ Template Engine / View Engine Setup - (don't touch) ************
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, '/views')); // Define la ubicación de la carpeta de las Vistas
+app.use(locals);
+app.use(remember);
 
-// ************ WRITE YOUR CODE FROM HERE ************
-// ************ Route System require and use() ************
-const mainRouter = require('./routes/index'); // Rutas main
-const productsRouter = require('./routes/products'); // Rutas /products
-const usersRouter = require('./routes/users'); // Rutas /users
 
 app.use('/', mainRouter);
 app.use('/products', productsRouter);

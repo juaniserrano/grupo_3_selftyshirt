@@ -22,7 +22,7 @@
         <% } %> 
         <br/>
         <h3>Datos de registro:</h3>
-      <form action="/users/register" method="POST">
+      <form action="/users/register" enctype="multipart/form-data" method="POST">
         <input type="name" name="firstName" placeholder="Nombre" />
         <input type="name" name="lastName" placeholder="Apellido" value="<%= locals.old && old.lastName ? old.lastName : "" %>" />
         <input type="email" name="email" placeholder="Correo Electronico" />
@@ -34,11 +34,10 @@
           <option value="admin">Administrador</option>
         </select>
         <br />
-        <label for="image" class="form-label">Elegí tú Imagen:</label>
+        <label for="avatar" class="form-label">Elegí tú Imagen:</label>
         <br />
-        <input type="file" name="image" placeholder="" accept=".jpg" />
-        <br />
-        <br />
+        			<input type="file" name="avatar" id="avatar" class="form-input" />
+							<small id="imageHelpBlock" class="form-text text-muted"> Imagen de hasta 2 mb </small>
         <br />
         <input type="submit" value="Registrarse" />
         <br />

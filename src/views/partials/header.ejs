@@ -42,8 +42,17 @@
 				</div>
 				<div id="links">
 					<div class="links-left">
-					<a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i></a>
-					<a href="/users/login"> Iniciar Sesión <i class="fa-solid fa-user"></i></a>
+					<a href="/products/cart">Carrito <i class="fa-solid fa-cart-shopping"></i></a>
+					<% if(locals.userLocals){ %>
+            <a class="/users/list" aria-current="page" href="/users/profile/<%= locals.userLocals.id %> ">Profile <i class="fa-solid fa-user"></i></a>
+						<form action="/users/logout" method="post">
+            <button class="btn btn-dark" type="submit">Cerrar Sesión</button>
+          </form>
+            </li>
+          <% }else{ %>
+            <a href="/users/login"> Iniciar Sesión <i class="fa-solid fa-user"></i></a>
+          <% } %> 
+					
 				</div>
 			</div>
 
