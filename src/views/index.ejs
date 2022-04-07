@@ -134,7 +134,12 @@
 		<script>
 			$(window).on('load', function () {
 				$('#loading').hide();
+				let notAllowedParam = new URL(location.href).searchParams.get('notAllowed')
+				if (notAllowedParam) {
+					swal("No Autorizado", "No tiene los permisos para acceder a esta vista", "error")
+				}
 			});
 		</script>
+		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	</body>
 </html>

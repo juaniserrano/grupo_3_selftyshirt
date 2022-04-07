@@ -1,7 +1,7 @@
 :root {
 	/*Selfty Shirt color palette*/
 	--sh-background: #eeeeee;
-	--sh-teal: #00adb5;
+	--sh-teal: #5aa0d8;
 	--sh-darkblue: #222831;
 	--sh-grey: #222831;
 }
@@ -349,4 +349,12 @@ body {
 	.fa-bars {
 		display: none;
 	}
+}
+
+.headerAvatar > img{
+	width: 2.5rem;
+	height: 2.5rem;
+	margin-right: 10px;
+	border: var(--sh-teal) 1px solid;
+	margin: 0.2rem;
 }

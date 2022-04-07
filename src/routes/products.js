@@ -6,6 +6,7 @@ const multer = require('multer');
 const path = require('path');
 // ************ Controller Require ************
 const productsController = require('../controllers/productsController');
+const guestMiddleware = require('../middlewares/guestMiddleware');
 
 
 const storage = multer.diskStorage({
@@ -32,7 +33,7 @@ const validateCreateForm = [
 
 /*** GET ALL PRODUCTS ***/
 router.get('/', productsController.index);
-router.get('/cart', productsController.cart);
+router.get('/cart', guestMiddleware, productsController.cart);
 
 /*** GET ONE PRODUCT ***/
 router.get('/detail/:id', productsController.detail);

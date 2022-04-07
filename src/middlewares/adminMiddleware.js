@@ -4,5 +4,5 @@ module.exports = (req, res, next) => {
   if (req.session.usuarioLogueado && req.session.usuarioLogueado.category == 'admin') {
     return next();
   }
-  return res.redirect('/');
+  return res.redirect('/?notAllowed=true');
 }

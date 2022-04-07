@@ -501,5 +501,49 @@
         "category": "admin",
         "cartProducts": {},
         "avatar": "user-1649278279774.jpg"
+    },
+    {
+        "id": "user-1f9mwy6qwl1objqrh",
+        "firstName": "admin",
+        "lastName": "admin",
+        "email": "admin@admin.com",
+        "password": "$2a$10$XJC53rU3SsEHu807ab./POvvWC1l43LmpTPd.PvrJR3xWQKlTips6",
+        "category": "user",
+        "newsletter": true,
+        "cartProducts": {},
+        "avatar": "user-1649294813478.jpg"
+    },
+    {
+        "id": "user-1f9mwy66wl1obl800",
+        "firstName": "asd",
+        "lastName": "asd",
+        "email": "asd@admin.com",
+        "password": "$2a$10$uRyl3xFAd/2gB/8ZPbM8Me6I93i0ivfIWhSZP3ASRhfKB1X4abPmW",
+        "category": "admin",
+        "newsletter": true,
+        "cartProducts": {},
+        "avatar": "user-1649294882473.jpg"
+    },
+    {
+        "id": "user-1f9mwy5dkl1obouv7",
+        "firstName": "admin",
+        "lastName": "admin",
+        "email": "admin@admin.com",
+        "password": "$2a$10$Vc2EU4W0ANDVY1YInJZbT.I1T.gywhVo7GVc4muogb3tQcNrb2PGu",
+        "category": "admin",
+        "newsletter": true,
+        "cartProducts": {},
+        "avatar": "user-1649295052080.jpg"
+    },
+    {
+        "id": "user-1f9mwy8d0l1oc5kic",
+        "firstName": "asdsd",
+        "lastName": "asdasd",
+        "email": "asdasd@gmail.com",
+        "password": "$2a$10$rNnYHGhRrvxQgwuDI3tTH.kuf4Rh5SNhBkmzQEDM0fYXadS3yf10O",
+        "category": "user",
+        "newsletter": true,
+        "cartProducts": {},
+        "avatar": "default-avatar.jpg"
     }
 ]

@@ -41,7 +41,7 @@ const usersController = {
 			...req.body,
 			password: bcrypt.hashSync(req.body.password, 10),  // Hasheo de password - Encrypt password
 			newsletter: true,
-			category: 'user',
+			category: req.body.category,
 			cartProducts: {},
 		avatar: req.file ? req.file.filename : "default-avatar.jpg"
 		};
@@ -63,14 +63,13 @@ const usersController = {
 			if (userFound){
             let user = {
                 id: userFound.id,
-                name: userFound.name,
-                last_name: userFound.last_name,
+                name: userFound.firstName,
+                lastName: userFound.lastName,
                 avatar: userFound.avatar,
+				category: userFound.category,
             }
 
-            console.log(req.session)
-
-						req.session.usuarioLogueado = user;
+			req.session.usuarioLogueado = user;
 
             if(req.body.remember){
                 res.cookie("user", user.id, {maxAge: 60000 * 24})
@@ -87,7 +86,7 @@ const usersController = {
 		let id = req.params.id;
 		let finalUsers = users.filter((user) => user.id != id);
 		fs.writeFileSync(usersFilePath, JSON.stringify(finalUsers, null, ' '));
-		res.redirect('/users/list');
+		res.redirect('/');
 	},
 
 	profile: function (req, res) {

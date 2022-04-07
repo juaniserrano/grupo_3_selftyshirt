@@ -7,6 +7,7 @@ const path = require('path');
 const validationForm = require('../../validator/validationForm');
 const userMiddleware = require('../middlewares/userMiddleware');
 const adminMiddleware = require('../middlewares/adminMiddleware');
+const guestMiddleware = require('../middlewares/guestMiddleware');
 
 const storage = multer.diskStorage({
 	destination: (req, file, cb) => {

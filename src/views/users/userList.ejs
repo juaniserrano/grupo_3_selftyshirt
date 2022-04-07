@@ -24,9 +24,9 @@
                 <tr>
                     <td><%= user.firstName %></td>
                     <td><%= user.lastName %></td>
+                    <td><%= '-' %></td>
                     <td><%= user.email %></td>
-                    <td><%= user.id %></td>
-                    <td><a href="   <%=user.id%>">Eliminar <i class="fa fa-trash" aria-hidden="true"></i></a> <a href="users/edit/<%= user.id %> ">Modificar<i class="fa-solid fa-pen-to-square"></i></a><a href="/users/profile/<%= user.id %>">Ver Perfil <i class="fa-solid fa-user"></i></a></td>
+                    <td><a href="./delete/<%=user.id%>">Eliminar <i class="fa fa-trash" aria-hidden="true"></i></a> <a href="./edit/<%= user.id %> ">Modificar<i class="fa-solid fa-pen-to-square"></i></a><a href="/users/profile/<%= user.id %>">Ver Perfil <i class="fa-solid fa-user"></i></a></td>
                 </tr>
                 <%})%>
             </div>
