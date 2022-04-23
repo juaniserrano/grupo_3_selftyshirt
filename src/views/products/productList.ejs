@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+	<!-- Include Head -->
+	<%- include('../partials/head', {title: 'Productos'}) %>
+	<link rel="stylesheet" href="/css/productList.css" />
+
+	<body>
+		<%- include('../partials/header') %>
+		<main>
+			<div class="products-top-bar">
+				<h2>Productos</h2>
+				<p>Renueva tú estilo, expresa lo que quieras a través de nuestros diseños y muéstrales quién eres!</p>
+			</div>
+
+			<!-- Stack the columns on mobile by making one full-width and the other half-width -->
+			<div class="row">
+				<div class="col-12 col-md-8">Filtros</div>
+				<div class="col-6 col-md-4">
+					<select required>
+						<!--
+          This is how we can do "placeholder" options.
+          note: "required" attribute is on the select
+        -->
+						<option value="" hidden>Ordenar por:</option>
+
+						<!-- normal options -->
+						<option value="1">Precio mas Bajo a mas Alto</option>
+						<option value="2">Precio mas Alto a mas Bajo</option>
+						<option value="3">Ofertas</option>
+						<option value="4">Popular</option>
+						<option value="5">Nuevos Productos</option>
+					</select>
+				</div>
+
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-lg-2 col-sm-4 col-12 bg-none p-4" style="border-right: 0.2rem solid black">
+							<form>
+								<div class="categorias">
+									<h3>Categorias</h3>
+									<label><input type="checkbox" id="cbox1" value="first_checkbox" /> Remeras</label>
+									<label><input type="checkbox" id="cbox1" value="first_checkbox" /> Remeras</label>
+									<label><input type="checkbox" id="cbox1" value="first_checkbox" /> Buzos</label>
+									<label><input type="checkbox" id="cbox1" value="first_checkbox" /> Medias</label>
+									<label><input type="checkbox" id="cbox1" value="first_checkbox" /> Gorros</label>
+								</div>
+								<div class="talle">
+									<h3>Talle</h3>
+									<label><input type="checkbox" id="cbox1" value="xs" />XS</label>
+									<label><input type="checkbox" id="cbox1" value="s" />S</label>
+									<label><input type="checkbox" id="cbox1" value="m" />M</label>
+									<label><input type="checkbox" id="cbox1" value="l" />L</label>
+									<label><input type="checkbox" id="cbox1" value="xl" />XL</label>
+									<label><input type="checkbox" id="cbox1" value="xxl" />XXL</label>
+									<label><input type="checkbox" id="cbox1" value="xxxl" />XXXL</label>
+								</div>
+							</form>
+						</div>
+						<div class="col-lg-10 col-md-8 col-12 bg-none p-1">
+							<div class="row prodcuts">
+								<!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+								<% products.forEach(function(product){ let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0) %>
+
+								<div class="col-lg-4 col-sm-6 col-6 bg-none p-3">
+									<a href="/products/detail/<%= product.id %>">
+										<section class="product-box">
+											<section class="sale-with-img">
+												<% if(parseInt(product.discount,10) > 0){%>
+												<span class="sale"><%= product.discount %>% OFF</span>
+												<%}%>
+												<figure class="card-img">
+													<img class="product-img" src="/images/products/<%= product.image %>" alt="imagen de producto" />
+												</figure>
+											</section>
+											<article class="product-box_data">
+												<div class="priceStrike"><del>$<%=product.price %></del></div>
+												<h2>$ <%= toThousand(finalPrice) %></h2>
+												<p><%= product.name %></p>
+												<% if(parseInt(product.price,10) > 5000){%>
+												<div style="color: green; font-weight: 800">Envio GRATIS</div>
+												<i class="fas fa-truck" style="color: green"></i>
+												<%}%>
+											</article>
+										</section>
+									</a>
+								</div>
+								<% }) %>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<nav aria-label="Page navigation example">
+					<ul class="pagination justify-content-center">
+						<li class="page-item disabled">
+							<a class="page-link">Anterior</a>
+						</li>
+						<li class="page-item active" aria-current="page">
+							<a class="page-link" href="#">1</a>
+						</li>
+						<li class="page-item"><a class="page-link" href="#">2</a></li>
+						<li class="page-item"><a class="page-link" href="#">3</a></li>
+						<li class="page-item">
+							<a class="page-link" href="#">Siguiente</a>
+						</li>
+					</ul>
+				</nav>
+				<!-- todos los productos -->
+			</div>
+			<%- include('../partials/footer') %>
+		</main>
+	</body>
+</html>
