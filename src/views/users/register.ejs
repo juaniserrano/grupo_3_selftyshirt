@@ -1,45 +1,50 @@
-<%- include('../partials/head') %>
-    <link rel="stylesheet" href="css/register.css" />
-    <link rel="stylesheet" href="css/index.css" />
-    <title>Registro - Selfty Shirt</title>
-  </head>
-
-
+<!DOCTYPE html>
+<html lang="es">
+  <!-- Include Head -->
+  <%- include('../partials/head', {title: 'Registrarse'}) %>
+  <link rel="stylesheet" href="/css/register.css" />
   <body>
+    <!-- Header -->
     <%- include('../partials/header') %>
 
   <body>
     <main class="register">
 
-      <div class="datos-registro">
-        <div class="logo-ctn">
-        <img src="images/logo.png" alt="" class="pic" />
-      </div>
+      <div class="container">
+        <img src = "/images/profile.svg" alt="SVG IMG"/>
         <h2>Crear cuenta</h2>
-        <br />
+        <% if (locals.errors){ %> 
+          <% errors.forEach(error => { %>
+          <div class="alert alert-danger" role="alert">
+            <%= error.msg %>
+</div>
+        <% }); %> 
+        <% } %> 
+        <br/>
         <h3>Datos de registro:</h3>
-      </div>
-      <form action="/" method="POST">
-        <input type="text" name="name" placeholder="Nombre" />
-        <br />
-        <input type="text" name="user" placeholder="Apellido" />
-        <br />
+      <form action="/users/register" enctype="multipart/form-data" method="POST">
+        <input type="name" name="firstName" placeholder="Nombre" />
+        <input type="name" name="lastName" placeholder="Apellido" value="<%= locals.old && old.lastName ? old.lastName : "" %>" />
         <input type="email" name="email" placeholder="Correo Electronico" />
+        <input type="password" name="password" placeholder="Elegí tu contraseña" />
+  
+         <!--Esto es para colocar si es user o admin, toca hacer un middleware-->
+        <label>Categoria: </label> <select name="category">
+          <option value="user">Usuario</option>
+          <option value="admin">Administrador</option>
+        </select>
         <br />
-        <input type="password" name="pass" placeholder="Elegí tu contraseña" />
+        <label for="avatar" class="form-label">Elegí tú Imagen:</label>
         <br />
-        <input
-          type="password"
-          name="pass_confirm"
-          placeholder="Confirmá tu contraseña"
-        />
-        <br />
+        			<input type="file" name="avatar" id="avatar" class="form-input" />
+							<small id="imageHelpBlock" class="form-text text-muted"> Imagen de hasta 2 mb </small>
         <br />
         <input type="submit" value="Registrarse" />
         <br />
-        ¿Ya tienes una cuenta? <a href="/login" class="a_top_hypers"><span style="color: blue;">Iniciar sesión</a>
+        ¿Ya tienes una cuenta? <a href="./login" class="a_top_hypers"><span style="color: blue;">Iniciar sesión</a>
         <br />
       </form>
+      </div>
     </main>
 <%- include('../partials/footer') %>
   </body>

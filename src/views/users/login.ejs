@@ -1,29 +1,42 @@
-  <%- include('../partials/head') %>
-  <head>
-    <link rel="stylesheet" href="css/index.css" />
-    <link rel="stylesheet" href="css/login.css" />
-    <title>Iniciar Sesion - Selfty Shirt</title>
-  </head>
-
-    <%- include('../partials/header') %>
+<!DOCTYPE html>
+<html lang="es">
+	<!-- Include Head -->
+	<%- include('../partials/head', {title: 'Iniciar sesión'}) %>
+  <link rel="stylesheet" href="/css/login.css" />
 
   <body>
+    <!-- Header -->
+    <%- include('../partials/header') %>
+    <!-- /Header -->
+  <body>
     <main class="register">
-
       <div class="datos-registro">
         <div class="logo-ctn">
-        <img src="images/logo.png" alt="" class="pic" />
-      </div>
+          <img src="/images/logo-orange-blue.png" alt="" class="pic" />
+        </div>
         <h2>Bienvenido!</h2>
+        <% if(locals.errorMsg){ %>
+                          <div class="alert alert-danger" role="alert">
+            <%= errorMsg %>
+</div>
+              <% } %> 
+        <% if(locals.errorsLogin && locals.errorsLogin.email){ %>
+          <div class="alert alert-danger" role="alert">
+            <%= locals.errorsLogin.email.msg %>
+</div>
+        <% }; %>
+          <% if(locals.errorsLogin && locals.errorsLogin.password){ %>
+          <div class="alert alert-danger" role="alert">
+            <%= locals.errorsLogin.password.msg %>
+</div>
+        <% }; %>
+
         <h3>Ingresar con correo electronico:</h3>
       </div>
-      <form action="/" method="POST">
-        <input type="email" name="email" placeholder="Correo Electronico" />
-        <br />
-        <input type="password" name="pass" placeholder="Contraseña" />
-        <br />
-        <br />
-        <div class="recordar-check"><label><input type="checkbox" id="remember" value="true"> Recordar mi cuenta</label></div>
+      <form action="/users/login" method="POST">
+        <input class="my-3 rounded border" type="email" name="email" placeholder="Correo Electronico" />
+        <input class="mb-2 rounded border" type="password" name="password" placeholder="Contraseña" />
+        <div class="recordar-check"><label><input type="checkbox" name="remember" id="remember" value="true"> Recordar mi cuenta</label></div>
       </div>
       <div class="google_button">
         <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="">
@@ -32,7 +45,7 @@
       <br>
         <input type="submit" value="Ingresar" />
         <br />
-        ¿No tienes una cuenta? <a href="/register" class="a_top_hypers"><span style="color: blue;">Regístrate</a>
+        ¿No tienes una cuenta? <a href="../users/register" class="a_top_hypers"><span style="color: blue;">Regístrate</a>
         <br />
       </form>
     </main>
