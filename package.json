@@ -21,6 +21,7 @@
 		"bcryptjs": "^2.4.3",
 		"cookie-parser": "~1.4.4",
 		"debug": "~2.6.9",
+		"dotenv": "^16.0.0",
 		"ejs": "~2.6.1",
 		"express": "~4.16.1",
 		"express-session": "^1.17.2",
@@ -34,7 +35,6 @@
 		"nodemon": "^2.0.15",
 		"sass": "^1.49.9",
 		"sequelize": "^6.19.0",
-		"sequelize-cli": "^6.4.1",
 		"uniqid": "^5.4.0"
 	},
 	"devDependencies": {
