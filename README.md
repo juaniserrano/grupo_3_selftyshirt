@@ -1,4 +1,6 @@
-# Selfty Shirt 🛒
+# Selfty Shirt 🛒 
+<img src="public/images/logo-orange-blue.png" alt="Selfty Shirt" style=" width: 50%;"/>
+
 
 _La personalidad, es el mejor accesorio que puedes llevar. Roberto Cavalli_
 
