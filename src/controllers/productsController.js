@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const db = require('../database/models');
 var uniqid = require('uniqid');
 
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
@@ -21,12 +22,18 @@ function setImgDefault(product) {
 
 const controller = {
 	// Root - Show all products
+	// index: (req, res) => {
+	// 	res.render('products/productList', {
+	// 		products,
+	// 		toThousand,
+	// 	});
+	// },
 	index: (req, res) => {
-		res.render('products/productList', {
-			products,
-			toThousand,
-		});
-	},
+        db.Product.findAll()
+            .then(products => {
+                res.render('proucts/productsList.ejs', {products})
+            })
+    },
 	// Detail - Detail from one product
 	detail: (req, res) => {
 		let id = req.params.id;
