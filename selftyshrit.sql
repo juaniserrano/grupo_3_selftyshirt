@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 24-04-2022 a las 04:12:10
+-- Tiempo de generación: 25-04-2022 a las 01:16:38
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.1.2
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `selftyshirt`
+-- Base de datos: `structure`
 --
 CREATE DATABASE IF NOT EXISTS `structure` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `structure`;
