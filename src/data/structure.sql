@@ -10,6 +10,7 @@ CREATE TABLE `products` (
  `update_at` timestamp NULL DEFAULT NULL,
  `stock` smallint(6) unsigned DEFAULT NULL,
  `category_id` smallint(6) unsigned DEFAULT NULL,
+ `image` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
 
@@ -57,6 +58,7 @@ CREATE TABLE `users` (
  `adress` varchar(30) CHARACTER SET utf8 DEFAULT NULL,
  `phone` int(10) unsigned DEFAULT NULL,
  `role_id` smallint(4) unsigned DEFAULT NULL,
+ `image` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
 
