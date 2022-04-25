@@ -20,8 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `structure`
 --
-CREATE DATABASE IF NOT EXISTS `structure` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `structure`;
+CREATE DATABASE IF NOT EXISTS `selftyshirt` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `selftyshirt`;
 
 -- --------------------------------------------------------
 
