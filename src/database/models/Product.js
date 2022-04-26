@@ -1,32 +1,36 @@
-module.exports = (sequelize, dataTypes) => {
+module.exports = (sequelize, DataTypes) => {
 	let alias = 'Product'; // esto debería estar siempre en singular
 	let cols = {
 		id: {
-            type: dataTypes.BIGINT(10).UNSIGNED,
+            type: DataTypes.BIGINT(10).UNSIGNED,
             primaryKey: true,
             allowNull: false,
             autoIncrement: true
 		},
-		// created_at: dataTypes.TIMESTAMP,
-		// updated_at: dataTypes.TIMESTAMP,
+		// created_at: DataTypes.TIMESTAMP,
+		// updated_at: DataTypes.TIMESTAMP,
         name: {
-			type: dataTypes.STRING(500),
+			type: DataTypes.STRING(500),
 			allowNull: false,
 		},
 		price: {
-			type: dataTypes.DECIMAL(4, 2).UNSIGNED,
+			type: DataTypes.DECIMAL(4, 2).UNSIGNED,
 			allowNull: false,
 		},
 		description: {
-			type: dataTypes.STRING(200).UNSIGNED,
+			type: DataTypes.STRING(200),
 			allowNull: false,
 		},
 		stock: {
-			type: dataTypes.INT(100).UNSIGNED,
+			type: DataTypes.BIGINT(100).UNSIGNED,
 			allowNull: false,
 		},
-        category_id: dataTypes.BIGINT(10),
-		image: dataTypes.STRING(100),
+		discount: {
+			type: DataTypes.SMALLINT(3).UNSIGNED,
+			allowNull: false,
+		},
+        category_id: DataTypes.BIGINT(10),
+		image: DataTypes.STRING(100),
 	};
 	let config = {
 		timestamps: true,
@@ -38,12 +42,6 @@ module.exports = (sequelize, dataTypes) => {
 
 	//Hacer associations despues de definir el modelo
 	//Aquí debes realizar lo necesario para crear las relaciones con los otros modelos (Genre - Actor)
-	Product.associate = function (models) {
-		Product.belongsTo(models.Category, {
-			as: 'categories',
-			foreignKey: 'category_id',
-		});
-	};
 
 	return Product;
 };

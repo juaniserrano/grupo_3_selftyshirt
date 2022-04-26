@@ -68,5 +68,15 @@
   "stockquantity": "40",
   "category": "tshirt",
   "description": "Remera con tela de primera calidad importada, Algodón 100% jersey 24/1 de textura suave y liviana "
+ },
+ {
+  "id": "product-1f9mwy9t8l2e9nsi6",
+  "image": "image-default-tshirt.jpg",
+  "name": "",
+  "price": "",
+  "discount": "",
+  "stockquantity": "",
+  "category": "tshirt",
+  "description": ""
  }
 ]
