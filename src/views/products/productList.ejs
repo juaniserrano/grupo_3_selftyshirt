@@ -74,12 +74,12 @@
 											</section>
 											<article class="product-box_data">
 												<% if (product.discount > 0) { %>
-													<div class="priceStrike"><del>$<%=product.price %></del></div>
+													<div class="priceStrike"><del>$<%=product.price%></del></div>
 												<% } else { %> 
-													<div class="priceStrike opacity-0">$<%=product.price %></div>
+													<div class="priceStrike opacity-0">$<%=product.price%></div>
 													<% } %>
 												<h2>$ <%= toThousand(finalPrice) %></h2>
-												<p><%= product.name %></p>
+												<p><%=product.name%></p>
 												<% if(parseInt(product.price,10) > 5000){%>
 												<div style="color: green; font-weight: 800">Envio GRATIS</div>
 												<i class="fas fa-truck" style="color: green"></i>

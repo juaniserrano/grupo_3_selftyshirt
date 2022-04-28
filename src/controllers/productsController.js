@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const db = require('../database/models');
+const sequelize = db.sequelize;
 var uniqid = require('uniqid');
 
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
@@ -31,7 +32,7 @@ const controller = {
 	index: (req, res) => {
         db.Product.findAll()
             .then(products => {
-                res.render('proucts/productsList.ejs', {products})
+                res.render('products/productList.ejs', {products, toThousand});
             })
     },
 	// Detail - Detail from one product
@@ -43,6 +44,13 @@ const controller = {
 			toThousand,
 		});
 	},
+	'detail': (req, res) => {
+        db.Product.findByPk(req.params.id)
+            .then(product => {
+                res.render('products/productDetail.ejs', {			product,
+					toThousand});
+            });
+    },
 
 	// Create - Form to create
 	create: (req, res) => {
