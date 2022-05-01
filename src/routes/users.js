@@ -38,6 +38,7 @@ router.post('/register', upload.single('avatar'), validationForm.register, users
 
 /*** GET ONE USER ***/
 router.get('/profile/:id', usersController.profile);
+router.get('/profile/edit/:id', usersController.edit);
 
 router.get('/list', adminMiddleware, usersController.list);
 

@@ -3,6 +3,7 @@ const path = require('path');
 const db = require('../database/models');
 const sequelize = db.sequelize;
 var uniqid = require('uniqid');
+const { name } = require('ejs');
 
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -11,15 +12,17 @@ const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
 
 function setImgDefault(product) {
 	if (product.category === 'socks') {
-		product.image = 'image-default-socks.jpg';
+		return 'image-default-socks.jpg';
 	}
 	if (product.category === 'hoodie') {
-		product.image = 'image-default-hoodie.jpg';
+		return 'image-default-hoodie.jpg';
 	}
 	if (product.category === 'tshirt') {
-		product.image = 'image-default-tshirt.jpg';
+		return 'image-default-tshirt.jpg';
 	}
 }
+
+const Product = db.Product;
 
 const controller = {
 	// Root - Show all products
@@ -30,22 +33,22 @@ const controller = {
 	// 	});
 	// },
 	index: (req, res) => {
-        db.Product.findAll()
+        Product.findAll()
             .then(products => {
                 res.render('products/productList.ejs', {products, toThousand});
             })
     },
 	// Detail - Detail from one product
-	detail: (req, res) => {
-		let id = req.params.id;
-		let product = products.find((product) => product.id == id);
-		res.render('products/productDetail', {
-			product,
-			toThousand,
-		});
-	},
+	// detail: (req, res) => {
+	// 	let id = req.params.id;
+	// 	let product = products.find((product) => product.id == id);
+	// 	res.render('products/productDetail', {
+	// 		product,
+	// 		toThousand,
+	// 	});
+	// },
 	'detail': (req, res) => {
-        db.Product.findByPk(req.params.id)
+        Product.findByPk(req.params.id)
             .then(product => {
                 res.render('products/productDetail.ejs', {			product,
 					toThousand});
@@ -58,21 +61,19 @@ const controller = {
 	},
 
 	// Create -  Method to store
-	store: (req, res) => {
+	store: async (req, res) => {
 		let newProduct = {
-			id: uniqid('product-'),
+			name: req.body.name,
+			price: req.body.price,
+			description: req.body.description,
+			discount: req.body.discount,
+			stock: req.body.stockquantity,
+			category_id: req.body.category,
 			image: '',
-			...req.body,
 		};
-		if (!req.file) {
-			console.log('No file received');
-			setImgDefault(newProduct);
-		} else {
-			newProduct.image = req.file.filename;
-		}
-		products.push(newProduct);
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
-		res.redirect('/products/detail/' + newProduct.id);
+		newProduct.image =  req.file ? req.file.filename : setImgDefault(newProduct);
+		let productCreated = await Product.create(newProduct);
+		res.redirect('/products/detail/' + productCreated.id);
 	},
 
 	cart: (req, res) => {
@@ -80,36 +81,43 @@ const controller = {
 	},
 	// Update - Form to edit
 	edit: (req, res) => {
-		let id = req.params.id;
-		let productToEdit = products.find((product) => product.id == id);
-		res.render('products/productEdit', { productToEdit });
+		Product.findByPk(req.params.id).then((product) => {
+			res.render('products/productEdit', { productToEdit : product });
+		});
 	},
+	
 	// Update - Method to update
-	update: (req, res) => {
-		let id = req.params.id;
-		let productToEdit = products.find((product) => product.id == id);
-
-		productToEdit.name = req.body.name;
-		productToEdit.description = req.body.description;
-		productToEdit.price = req.body.price;
-		productToEdit.discount = req.body.discount;
-		productToEdit.stockquantity = req.body.stockquantity;
-		if (!req.file) {
-			console.log('No file received');
-		} else {
-			productToEdit.image = req.file.filename;
-		}
-
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
-		res.redirect('/products/detail/' + productToEdit.id);
+	update: async (req, res) => {
+		let productId = req.params.id;
+        Product.update(
+        {
+			name: req.body.name,
+			price: req.body.price,
+			description: req.body.description,
+			discount: req.body.discount,
+			stock: req.body.stockquantity,
+			category_id: req.body.category,
+			// if (!req.file) {
+			// 	console.log('No file received');
+			// } else {
+			// 	productToEdit.image = req.file.filename;
+        },
+        {
+            where: {id: [productId]}
+        }).then(() => {
+			res.redirect('/products/detail/' + productId);
+		});
 	},
 
 	// Delete - Delete one product from DB
 	destroy: (req, res) => {
-		let id = req.params.id;
-		let finalProducts = products.filter((product) => product.id != id);
-		fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, ' '));
-		res.redirect('/');
+		Product.destroy({
+			where: {
+				id: req.params.id,
+			}, force: true
+		}).then(() => {
+			res.redirect('/products');
+		});
 	},
 };
 

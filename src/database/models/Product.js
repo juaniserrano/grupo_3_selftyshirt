@@ -1,24 +1,18 @@
 module.exports = (sequelize, DataTypes) => {
 	let alias = 'Product'; // esto debería estar siempre en singular
 	let cols = {
-		id: {
-            type: DataTypes.BIGINT(10).UNSIGNED,
-            primaryKey: true,
-            allowNull: false,
-            autoIncrement: true
-		},
 		// created_at: DataTypes.TIMESTAMP,
 		// updated_at: DataTypes.TIMESTAMP,
         name: {
-			type: DataTypes.STRING(500),
+			type: DataTypes.STRING(200),
 			allowNull: false,
 		},
 		price: {
-			type: DataTypes.DECIMAL(4, 2).UNSIGNED,
+			type: DataTypes.DECIMAL(6, 2).UNSIGNED,
 			allowNull: false,
 		},
 		description: {
-			type: DataTypes.STRING(200),
+			type: DataTypes.STRING(100),
 			allowNull: false,
 		},
 		stock: {

@@ -15,7 +15,7 @@
         <h2>Crear cuenta</h2>
         <% if (locals.errors){ %> 
           <% errors.forEach(error => { %>
-          <div class="alert alert-danger" role="alert">
+          <div class="alert alert-danger w-50 text-center" role="alert">
             <%= error.msg %>
 </div>
         <% }); %> 
@@ -23,16 +23,13 @@
         <br/>
         <h3>Datos de registro:</h3>
       <form action="/users/register" enctype="multipart/form-data" method="POST">
-        <input type="name" name="firstName" placeholder="Nombre" />
-        <input type="name" name="lastName" placeholder="Apellido" value="<%= locals.old && old.lastName ? old.lastName : "" %>" />
-        <input type="email" name="email" placeholder="Correo Electronico" />
-        <input type="password" name="password" placeholder="Elegí tu contraseña" />
+        <input class="form-control p-2 my-1" type="text" name="first_name" placeholder="Nombre" />
+        <input class="form-control p-2 my-1" type="text" name="last_name" placeholder="Apellido" value="<%= locals.old && old.lastName ? old.lastName : "" %>" />
+        <input class="form-control p-2 my-1" type="email" name="email" placeholder="Correo Electronico" />
+        <input class="form-control p-2 my-1" type="password" name="password" placeholder="Elegí tu contraseña" />
+        <input class="form-control p-2 my-1" type="text" name="address" placeholder="Elegí tu direccion de envio" />
   
          <!--Esto es para colocar si es user o admin, toca hacer un middleware-->
-        <label>Categoria: </label> <select name="category">
-          <option value="user">Usuario</option>
-          <option value="admin">Administrador</option>
-        </select>
         <br />
         <label for="avatar" class="form-label">Elegí tú Imagen:</label>
         <br />

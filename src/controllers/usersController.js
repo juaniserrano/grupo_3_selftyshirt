@@ -4,14 +4,17 @@ const fs = require('fs');
 const path = require('path');
 var uniqid = require('uniqid');
 const bcrypt = require('bcryptjs');
+const db = require('../database/models');
 
 const usersFilePath = path.join(__dirname, '../data/usersDataBase.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
-function writeFile(array){
-    const arrayString = JSON.stringify(array, null, 4)
-    fs.writeFileSync(path.join(__dirname, "../data/users.json"), arrayString);
-}
+const User = db.User;
+
+// function writeFile(array){
+//     const arrayString = JSON.stringify(array, null, 4)
+//     fs.writeFileSync(path.join(__dirname, "../data/users.json"), arrayString);
+// }
 
 
 //const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
@@ -33,53 +36,61 @@ const usersController = {
 	//	res.cookie('remember', usuarioALoguearse.email, { maxAge: 60000 })
 	//}
 	// Create -  Method to user
-	create: (req, res) => {
+	create: async (req, res) => {
+		console.log(req.body);
 		let errors = validationResult(req);
 		if (errors.isEmpty()){
 		let newUser = {
-			id: uniqid('user-'),
-			...req.body,
+			first_name: req.body.first_name,
+			last_name:  req.body.last_name,
+			email: req.body.email,
 			password: bcrypt.hashSync(req.body.password, 10),  // Hasheo de password - Encrypt password
-			newsletter: true,
-			category: req.body.category,
-			cartProducts: {},
-		avatar: req.file ? req.file.filename : "default-avatar.jpg"
+			image: req.file ? req.file.filename : "default-avatar.jpg",
+			address: req.body.address,
+			role_id: '1'
 		};
-		users.push(newUser);
-		writeFile(users);
-		res.redirect('/users/profile/' + newUser.id);
+		// users.push(newUser);
+		// writeFile(users);
+		
+		let userCreated = await User.create(newUser);
+		res.redirect('/users/profile/' + userCreated.id);
 		} else{
 			res.render('users/register', { errors: errors.array(), old : req.body });
 		}
 	},
-	processLogin: (req, res) => {
+	processLogin: async (req, res) => {
 		const errors = validationResult(req);
 		        if(errors.errors.length > 0){
             res.render("users/login", {errorsLogin: errors.mapped()})
         }
-		const userFound = users.find(function(user){
-            return user.email == req.body.email && bcrypt.compareSync(req.body.password, user.password)
-        })
+		const userFound = await User.findOne( { where: { email: req.body.email } } )
 			if (userFound){
-            let user = {
-                id: userFound.id,
-                name: userFound.firstName,
-                lastName: userFound.lastName,
-                avatar: userFound.avatar,
-				category: userFound.category,
-            }
+            	let user = {
+                	id: userFound.id,
+                	name: userFound.first_name,
+                	lastName: userFound.last_name,
+                	avatar: userFound.avatar,
+					category: userFound.category,
+					email: userFound.email,
+					role_id: userFound.role_id,
+            	}
+				let isPasswordCorrect = bcrypt.compareSync(req.body.password, userFound.password)
+				if (isPasswordCorrect){
+					req.session.user = user;
+					req.session.usuarioLogueado = user;
 
-			req.session.usuarioLogueado = user;
+				if(req.body.remember){
+					res.cookie("user", user.id, {maxAge: 60000 * 24})
+				}
 
-            if(req.body.remember){
-                res.cookie("user", user.id, {maxAge: 60000 * 24})
-            }
+				res.redirect("/users/profile/" + user.id);
 
-            res.redirect("/users/profile/" + user.id);
-
-        }else{
-            res.render("users/login", {errorMsg: "Error credenciales invalidas!"})
-		}
+				}else{
+					res.render("users/login", {errorMsg: "Error credenciales invalidas!"})
+				}
+			}else{
+				res.render("users/login", {errorMsg: "Error usuario no encontrado!"})
+			}
 	},
 	// Eliminar un usuario
 	destroy: function (req, res) {
@@ -89,11 +100,40 @@ const usersController = {
 		res.redirect('/');
 	},
 
-	profile: function (req, res) {
+	profile: async function (req, res) {
 		let id = req.params.id;
-		let user = users.find((user) => user.id == id);
+		let user = await User.findOne({ where: { id: id } });
+		console.log(user);
 		res.render('users/userDetail', {
 			user,
+		});
+	},
+
+	edit: (req, res) => {
+		let user = User.findOne({ where: { id: req.params.id } })
+			res.render('users/userEdit', { userToEdit : user });
+	},
+	
+	// Update - Method to update
+	update: async (req, res) => {
+		let productId = req.params.id;
+        Product.update(
+        {
+			name: req.body.name,
+			price: req.body.price,
+			description: req.body.description,
+			discount: req.body.discount,
+			stock: req.body.stockquantity,
+			category_id: req.body.category,
+			// if (!req.file) {
+			// 	console.log('No file received');
+			// } else {
+			// 	productToEdit.image = req.file.filename;
+        },
+        {
+            where: {id: [productId]}
+        }).then(() => {
+			res.redirect('/products/detail/' + productId);
 		});
 	},
 	list: function (req, res) {

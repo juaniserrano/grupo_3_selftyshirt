@@ -34,4 +34,6 @@ Object.keys(db).forEach(modelName => {
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
+db.sequelize.sync({ force: false, alter:false }) // Create the table if it doesn't exist (Avoid 'force: true' it will drop the table if it exists)
+
 module.exports = db;

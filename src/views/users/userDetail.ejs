@@ -12,13 +12,14 @@
 			<div class="profile">
 				<div class="profile-box">
 					<div class="row">
-						<div class="col" id="profile-name">Hola, <%= user.firstName %> <%= user.lastName %> !</div>
-						<div class="col"><img src="/images/avatar/<%= user.avatar %>" alt="user image" class="user-img" /></div>
+						<div class="col" id="profile-name">Hola, <%= user.first_name %> <%= user.last_name %> !</div>
+						<div class="col"><img src="/images/avatar/<%= user.image %>" alt="user image" class="user-img" /></div>
+						<div class="col" id="profile-email"> Su direccion de envio es: <%= user.address %></div>
 					</div>
 					<div class="row">
 						<div class="col">Su email es: <%= user.email %></div>
 						<div class="col">
-							<button type="button" class="btn btn-success">Editar Perfil</button>
+							<a href="/users/profile/edit/<%= user.id %>""><button type="button" class="btn btn-success">Editar Perfil</button></a>
 							<button type="button" class="btn btn-danger">ELIMINAR</button>
 						</div>
 					</div>

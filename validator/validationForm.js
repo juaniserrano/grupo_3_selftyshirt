@@ -26,23 +26,23 @@ const validator = {
             .withMessage("Formato de email incorrecto")
             .bail()
             .custom(function(value){
-                let users = findAll()
-                //busco al usuario
-                let userFound = users.find(function(user){
-                    return user.email == value
-                })
-                //si existe un usuario devuelvo el error
-                if(userFound){
-                    throw new Error("Email ya registrado!");
-                }
-                //sino devuelvo true
+                // let users = findAll()
+                // //busco al usuario
+                // let userFound = users.find(function(user){
+                //     return user.email == value
+                // })
+                // //si existe un usuario devuelvo el error
+                // if(userFound){
+                //     throw new Error("Email ya registrado!");
+                // }
+                // //sino devuelvo true
                 return true
             })
             ,
-        check("firstName")
+        check("first_name")
             .notEmpty()
             .withMessage("Campo Nombre vacio"),
-        check("lastName")
+        check("last_name")
             .notEmpty()
             .withMessage("Campo Apellido vacio"),
         check("password")
