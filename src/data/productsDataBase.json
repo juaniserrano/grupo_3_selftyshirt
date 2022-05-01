@@ -78,5 +78,15 @@
   "stockquantity": "",
   "category": "tshirt",
   "description": ""
+ },
+ {
+  "id": "product-1f9mwy7mcl2jeosu1",
+  "image": "image-default-tshirt.jpg",
+  "name": "hola",
+  "price": "123",
+  "discount": "0",
+  "stockquantity": "1",
+  "category": "tshirt",
+  "description": "asd"
  }
 ]
