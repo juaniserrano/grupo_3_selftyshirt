@@ -20,7 +20,9 @@
 						<div class="col">Su email es: <%= user.email %></div>
 						<div class="col">
 							<a href="/users/profile/edit/<%= user.id %>""><button type="button" class="btn btn-success">Editar Perfil</button></a>
-							<button type="button" class="btn btn-danger">ELIMINAR</button>
+							<form action="/users/profile/delete/<%= user.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+								<button type="submit" class="btn btn-danger">ELIMINAR</button>
+							</form>
 						</div>
 					</div>
 				</div>
