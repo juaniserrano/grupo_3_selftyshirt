@@ -40,6 +40,9 @@ router.post('/register', upload.single('avatar'), validationForm.register, users
 router.get('/profile/:id', usersController.profile);
 router.get('/profile/edit/:id', usersController.edit);
 
+router.put('/profile/edit/:id', usersController.update);
+
+
 router.get('/list', adminMiddleware, usersController.list);
 
 router.delete('/delete/:id', usersController.destroy);

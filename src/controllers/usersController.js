@@ -121,30 +121,31 @@ const usersController = {
 	},
 
 	edit: (req, res) => {
-		let user = User.findOne({ where: { id: req.params.id } })
-			res.render('users/userEdit', { userToEdit : user });
-	},
+        User.findByPk(req.params.id).then((user) => {
+            res.render('users/userEdit', { userToEdit : user});
+        });
+    },
 	
 	// Update - Method to update
 	update: async (req, res) => {
-		let productId = req.params.id;
-        Product.update(
+		let userId = req.params.id;
+        User.update(
         {
-			name: req.body.name,
-			price: req.body.price,
-			description: req.body.description,
-			discount: req.body.discount,
-			stock: req.body.stockquantity,
-			category_id: req.body.category,
+			first_name: req.body.firstName,
+			last_name: req.body.lastName,
+			email: req.body.email,
+			password: req.body.password,
+			address: req.body.address,
+			newsletter: req.body.newsletter,
 			// if (!req.file) {
 			// 	console.log('No file received');
 			// } else {
-			// 	productToEdit.image = req.file.filename;
+			// 	userToEdit.image = req.file.filename;
         },
         {
-            where: {id: [productId]}
+            where: {id: [userId]}
         }).then(() => {
-			res.redirect('/products/detail/' + productId);
+			res.redirect('/users/profile/' + userId);
 		});
 	},
 	list: function (req, res) {
