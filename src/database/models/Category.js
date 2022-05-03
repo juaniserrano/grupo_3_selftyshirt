@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-	let alias = 'Role'; // esto debería estar siempre en singular
+	let alias = 'Category'; // esto debería estar siempre en singular
 	let cols = {
 		id: {
             type: DataTypes.INTEGER(10).UNSIGNED,
@@ -18,17 +18,19 @@ module.exports = (sequelize, DataTypes) => {
 		updatedAt: 'updated_at',
 		deletedAt: false,
 	};
-	const Role = sequelize.define(alias, cols, config);
+	const Category = sequelize.define(alias, cols, config);
 
 	//Hacer associations despues de definir el modelo
 	//Aquí debes realizar lo necesario para crear las relaciones con los otros modelos (Genre - Actor)
 
-    Role.associate = function (models) {
-        Role.hasMany(models.User, {
-            as: 'users',
-            foreignKey: 'role_id'
+    Category.associate = function (models) {
+        Category.hasMany(models.Product, {
+            as: 'products',
+            foreignKey: 'category_id'
         });
     }
 
-	return Role;
+	
+
+	return Category;
 };

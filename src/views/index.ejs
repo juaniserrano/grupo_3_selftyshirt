@@ -1,145 +1,102 @@
 <!DOCTYPE html>
 <html lang="es">
-	<!-- Include Head -->
-	<%- include('partials/head', {title: 'Inicio'}) %>
-	<body>
-		<div id="loading">
-			<img id="loading-image" src="/images/loading.gif" alt="Cargando..." />
-		</div>
-		<%- include('./partials/header') %>
-		<div class="content">
-			<div class="container-quote">
-				<blockquote class="blockquote text-center">
-					<p>
-						La personalidad, es el mejor <br />
-						accesorio que puedes llevar.
-					</p>
-					<footer class="blockquote-footer">Roverto Cavalli</footer>
-				</blockquote>
-			</div>
+  <!-- Include Head -->
+  <%- include('partials/head', {title: 'Inicio'}) %>
+  <body>
+    <div id="loading">
+      <img id="loading-image" src="/images/loading.gif" alt="Cargando..." />
+    </div>
+    <%- include('./partials/header') %>
+    <div class="content">
+      <div class="container-quote">
+        <blockquote class="blockquote text-center">
+          <p>
+            La personalidad, es el mejor <br />
+            accesorio que puedes llevar.
+          </p>
+          <footer class="blockquote-footer">Roverto Cavalli</footer>
+        </blockquote>
+      </div>
 
-			<div class="button-container">
-				<a href="/products"><button class="button">VER MÁS</button></a>
-			</div>
-		</div>
+      <div class="button-container">
+        <a href="/products"><button class="button">VER MÁS</button></a>
+      </div>
+    </div>
 
-		<%= typeof cookieColor != 'undefined' ? `style=background-color:"${cookieColor}"` : "" %>
+    <%= typeof cookieColor != 'undefined' ? `style=background-color:"${cookieColor}"` : "" %>
 
+    <div class="carousel-container">
+      <div id="carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./images/image1.png" class="d-block w-100" alt="image 1" />
+          </div>
+          <div class="carousel-item">
+            <img src="./images/image2.png" class="d-block w-100" alt="image 2" />
+          </div>
+          <div class="carousel-item">
+            <img src="/images/image3.png" class="d-block w-100" alt="image 3" />
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
 
-		<div class="carousel-container">
-			<div id="carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-				<div class="carousel-indicators">
-					<button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-					<button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-					<button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-				</div>
-				<div class="carousel-inner">
-					<div class="carousel-item active">
-						<img src="./images/image1.png" class="d-block w-100" alt="image 1" />
-					</div>
-					<div class="carousel-item">
-						<img src="./images/image2.png" class="d-block w-100" alt="image 2" />
-					</div>
-					<div class="carousel-item">
-						<img src="/images/image3.png" class="d-block w-100" alt="image 3" />
-					</div>
-				</div>
-				<button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
-					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-					<span class="visually-hidden">Previous</span>
-				</button>
-				<button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
-					<span class="carousel-control-next-icon" aria-hidden="true"></span>
-					<span class="visually-hidden">Next</span>
-				</button>
-			</div>
-		</div>
+    <div id="reviews">
+      <div class="container-reviews">
+        <div class="mgb-40 padb-30 auto-invert line-b-4 align-center">
+          <h4 class="font-cond-l fg-accent lts-md mgb-10" contenteditable="false">Aun no te convence?</h4>
+          <h1 class="font-cond-b fg-text-d lts-md fs-300 fs-300-xs no-mg" contenteditable="false">Mira lo que opinan nuestros clientes</h1>
+        </div>
+        <ul class="hash-list cols-3 cols-1-xs pad-30-all align-center text-sm">
+          <li>
+            <img src="./images/avatar/avatar1.jpg" class="wpx-100 img-round mgb-20" title="" alt="" data-edit="false" data-editor="field" data-field="src[Image Path]; title[Image Title]; alt[Image Alternate Text]" />
+            <div class="mx-auto" style="width: 9rem">
+              <div class="badge bg-dark text-wrap mgb-20">Compra Verificada <i class="fa-solid fa-circle-check" style="width: 1rem"></i></div>
+            </div>
+            <p class="fs-110 font-cond-l" contenteditable="false">" Me encantaron las prendas que compré, la calidad es re buena me sorprendió. El envío súper rápido y hermoso empaquetado, 10/10, lo recomiendo sin duda alguna. "</p>
+            <h5 class="font-cond mgb-5 fg-text-d fs-130" contenteditable="false">Maria Gimenez</h5>
+            <small class="font-cond case-u lts-sm fs-80 fg-text-l" contenteditable="false">Estudiante de Nutricion - Buenos Aires</small>
+          </li>
+          <li>
+            <img src="./images/avatar/avatar2.jpg" class="wpx-100 img-round mgb-20" title="" alt="" data-edit="false" data-editor="field" data-field="src[Image Path]; title[Image Title]; alt[Image Alternate Text]" />
+            <div class="mx-auto" style="width: 9rem">
+              <div class="badge bg-dark text-wrap mgb-20">Compra Verificada <i class="fa-solid fa-circle-check" style="width: 1rem"></i></div>
+            </div>
+            <p class="fs-110 font-cond-l" contenteditable="false">" Buena variedad de talles y colores, me encantaron los estampados. Las medidas están re bien y la calidad hermosa, muchas gracias. "</p>
+            <h5 class="font-cond mgb-5 fg-text-d fs-130" contenteditable="false">Julian Alvarez</h5>
+            <small class="font-cond case-u lts-sm fs-80 fg-text-l" contenteditable="false">Musico - Cordoba</small>
+          </li>
+          <li>
+            <img src="./images/avatar/avatar3.jpg" class="wpx-100 img-round mgb-20" title="" alt="" data-edit="false" data-editor="field" data-field="src[Image Path]; title[Image Title]; alt[Image Alternate Text]" />
+            <div class="mx-auto" style="width: 9rem">
+              <div class="badge bg-dark text-wrap mgb-20">Compra Verificada <i class="fa-solid fa-circle-check" style="width: 1rem"></i></div>
+            </div>
+            <p class="fs-110 font-cond-l" contenteditable="false">" Divino todo, compré ropa para mi hermana y para mi, gracias por la inclusión en los talles, es muy difícil encontrar ropa linda y de mi talle hoy en día. Sigan así. "</p>
+            <h5 class="font-cond mgb-5 fg-text-d fs-130" contenteditable="false">Sol Gracia</h5>
+            <small class="font-cond case-u lts-sm fs-80 fg-text-l" contenteditable="false">Content Creator - Santa Fe</small>
+          </li>
+        </ul>
+      </div>
+    </div>
 
-		<div id="reviews">
-			<div class="container-reviews">
-				<div class="mgb-40 padb-30 auto-invert line-b-4 align-center">
-					<h4 class="font-cond-l fg-accent lts-md mgb-10" contenteditable="false">Aun no te convence?</h4>
-					<h1 class="font-cond-b fg-text-d lts-md fs-300 fs-300-xs no-mg" contenteditable="false">Mira lo que opinan nuestros clientes</h1>
-				</div>
-				<ul class="hash-list cols-3 cols-1-xs pad-30-all align-center text-sm">
-					<li>
-						<img
-							src="./images/avatar/avatar1.jpg"
-							class="wpx-100 img-round mgb-20"
-							title=""
-							alt=""
-							data-edit="false"
-							data-editor="field"
-							data-field="src[Image Path]; title[Image Title]; alt[Image Alternate Text]"
-						/>
-						<div class="mx-auto" style="width: 9rem">
-							<div class="badge bg-dark text-wrap mgb-20">Compra Verificada <i class="fa-solid fa-circle-check" style="width: 1rem"></i></div>
-						</div>
-						<p class="fs-110 font-cond-l" contenteditable="false">
-							" Me encantaron las prendas que compré, la calidad es re buena me sorprendió. El envío súper rápido y hermoso empaquetado, 10/10, lo recomiendo sin duda alguna. "
-						</p>
-						<h5 class="font-cond mgb-5 fg-text-d fs-130" contenteditable="false">Maria Gimenez</h5>
-						<small class="font-cond case-u lts-sm fs-80 fg-text-l" contenteditable="false">Estudiante de Nutricion - Buenos Aires</small>
-					</li>
-					<li>
-						<img
-							src="./images/avatar/avatar2.jpg"
-							class="wpx-100 img-round mgb-20"
-							title=""
-							alt=""
-							data-edit="false"
-							data-editor="field"
-							data-field="src[Image Path]; title[Image Title]; alt[Image Alternate Text]"
-						/>
-						<div class="mx-auto" style="width: 9rem">
-							<div class="badge bg-dark text-wrap mgb-20">Compra Verificada <i class="fa-solid fa-circle-check" style="width: 1rem"></i></div>
-						</div>
-						<p class="fs-110 font-cond-l" contenteditable="false">
-							" Buena variedad de talles y colores, me encantaron los estampados. Las medidas están re bien y la calidad hermosa, muchas gracias. "
-						</p>
-						<h5 class="font-cond mgb-5 fg-text-d fs-130" contenteditable="false">Julian Alvarez</h5>
-						<small class="font-cond case-u lts-sm fs-80 fg-text-l" contenteditable="false">Musico - Cordoba</small>
-					</li>
-					<li>
-						<img
-							src="./images/avatar/avatar3.jpg"
-							class="wpx-100 img-round mgb-20"
-							title=""
-							alt=""
-							data-edit="false"
-							data-editor="field"
-							data-field="src[Image Path]; title[Image Title]; alt[Image Alternate Text]"
-						/>
-						<div class="mx-auto" style="width: 9rem">
-							<div class="badge bg-dark text-wrap mgb-20">Compra Verificada <i class="fa-solid fa-circle-check" style="width: 1rem"></i></div>
-						</div>
-						<p class="fs-110 font-cond-l" contenteditable="false">
-							" Divino todo, compré ropa para mi hermana y para mi, gracias por la inclusión en los talles, es muy difícil encontrar ropa linda y de mi talle hoy en día. Sigan así. "
-						</p>
-						<h5 class="font-cond mgb-5 fg-text-d fs-130" contenteditable="false">Sol Gracia</h5>
-						<small class="font-cond case-u lts-sm fs-80 fg-text-l" contenteditable="false">Content Creator - Santa Fe</small>
-					</li>
-				</ul>
-			</div>
-		</div>
+    <%- include('./partials/footer') %>
 
-		<%- include('./partials/footer') %>
-
-		<script
-			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-			integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-			crossorigin="anonymous"
-		></script>
-		<script src="./js/cookies.js"></script>
-		<script>
-			$(window).on('load', function () {
-				$('#loading').hide();
-				let notAllowedParam = new URL(location.href).searchParams.get('notAllowed')
-				if (notAllowedParam) {
-					swal("No Autorizado", "No tiene los permisos para acceder a esta vista", "error")
-				}
-			});
-		</script>
-		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-	</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="./js/cookies.js"></script>
+    <script src="./js/indexAlerts.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
 </html>

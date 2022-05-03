@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-  let alias = 'Product'; // esto debería estar siempre en singular
+  let alias = 'Order'; // esto debería estar siempre en singular
   let cols = {
     id: {
       type: DataTypes.INTEGER(10).UNSIGNED,
@@ -7,28 +7,26 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       autoIncrement: true,
     },
-    name: {
-      type: DataTypes.STRING(200),
+    amount: {
+      type: DataTypes.INTEGER(10),
       allowNull: false,
     },
-    price: {
-      type: DataTypes.DECIMAL(6, 2).UNSIGNED,
+    shipping_adress: {
+      type: DataTypes.STRING(60),
       allowNull: false,
     },
-    description: {
-      type: DataTypes.STRING(100),
+    order_date: {
+      type: DataTypes.DATEONLY,
       allowNull: false,
     },
-    stock: {
-      type: DataTypes.BIGINT(100).UNSIGNED,
+    order_status: {
+      type: DataTypes.STRING(60),
       allowNull: false,
     },
-    discount: {
-      type: DataTypes.SMALLINT(3).UNSIGNED,
+    user_id: {
+      type: DataTypes.INTEGER(10).UNSIGNED,
       allowNull: false,
     },
-    category_id: DataTypes.INTEGER(10).UNSIGNED,
-    image: DataTypes.STRING(100),
   };
   let config = {
     timestamps: true,
@@ -36,17 +34,17 @@ module.exports = (sequelize, DataTypes) => {
     updatedAt: 'updated_at',
     deletedAt: false,
   };
-  const Product = sequelize.define(alias, cols, config);
+  const Order = sequelize.define(alias, cols, config);
 
   //Hacer associations despues de definir el modelo
   //Aquí debes realizar lo necesario para crear las relaciones con los otros modelos (Genre - Actor)
 
-  Product.associate = function (models) {
-    Product.belongsTo(models.Category, {
-      as: 'category',
-      foreignKey: 'category_id',
+  Order.associate = function (models) {
+    Order.belongsTo(models.User, {
+      as: 'user',
+      foreignKey: 'user_id',
     });
   };
 
-  return Product;
+  return Order;
 };

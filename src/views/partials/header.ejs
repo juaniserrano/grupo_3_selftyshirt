@@ -47,7 +47,7 @@
 					<div class="links-left">
 					<a href="/products/cart">Carrito <i class="fa-solid fa-cart-shopping"></i></a>
 					<% if(locals.userLocals){ %>
-            <a class="headerAvatar" aria-current="page" href="/users/profile/<%= locals.userLocals.id %> "><img src="/images/avatar/<%= locals.userLocals.avatar %>" class="rounded-circle" alt=""> <%= locals.userLocals.name %> <%= locals.userLocals.lastName %> </a>
+            <a class="headerAvatar" aria-current="page" href="/users/profile/<%= locals.userLocals.id %> "><img src="/images/avatar/<%= locals.userLocals.avatar %>" class="rounded-circle" alt=""> <%= locals.userLocals.first_name %> <%= locals.userLocals.last_name %> </a>
 						<form action="/users/logout" method="post">
             <button class="btn btn-dark mb-2" type="submit" >Cerrar Sesión</button>
           </form>

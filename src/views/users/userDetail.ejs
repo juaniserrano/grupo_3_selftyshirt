@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
-	<!-- Include Head -->
-	<%- include('../partials/head', {title: 'Perfil de usuario'}) %>
-	<link rel="stylesheet" href="/css/userDetail.css" />
+  <!-- Include Head -->
+  <%- include('../partials/head', {title: 'Perfil de usuario'}) %>
+  <link rel="stylesheet" href="/css/userDetail.css" />
 
-	<body>
-		<!-- Header -->
-		<%- include('../partials/header') %>
-		<!-- /Header -->
-		<main>
-			<div class="profile">
-				<div class="profile-box">
-					<div class="row">
-						<div class="col" id="profile-name">Hola, <%= user.first_name %> <%= user.last_name %> !</div>
-						<div class="col"><img src="/images/avatar/<%= user.image %>" alt="user image" class="user-img" /></div>
-						<div class="col" id="profile-email"> Su direccion de envio es: <%= user.address %></div>
-					</div>
-					<div class="row">
-						<div class="col">Su email es: <%= user.email %></div>
-						<div class="col">
-							<a href="/users/profile/edit/<%= user.id %>""><button type="button" class="btn btn-success">Editar Perfil</button></a>
-							<form action="/users/profile/delete/<%= user.id %>?_method=DELETE" method="POST" style="display: inline-flex">
-								<button type="submit" class="btn btn-danger">ELIMINAR</button>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</main>
-		<%- include('../partials/footer') %>
-	</body>
+  <body>
+    <!-- Header -->
+    <%- include('../partials/header') %>
+    <!-- /Header -->
+    <main>
+      <div class="profile">
+        <div class="profile-box">
+          <div class="row">
+            <div class="col" id="profile-name">Hola, <%= user.first_name %> <%= user.last_name %> !</div>
+            <div class="col"><img src="/images/avatar/<%= user.image %>" alt="user image" class="user-img" /></div>
+            <div class="col" id="profile-email">Su direccion de envio es: <%= user.address %></div>
+          </div>
+          <div class="row">
+            <div class="col">Su email es: <%= user.email %></div>
+            <div class="col">
+              <a href="/users/profile/edit/<%= user.id %>"><button type="button" class="btn btn-success">Editar Perfil</button></a>
+              <!-- <form id="deleteUser-<%=user.id%>"> -->
+              <form action="/users/delete/<%= user.id %>?_method=DELETE" method="POST" id="deleteForm">
+                <button type="submit" class="btn btn-danger">ELIMINAR</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <%- include('../partials/footer') %>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="../../js/userDetail.js"></script>
+  </body>
 </html>

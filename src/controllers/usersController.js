@@ -94,10 +94,21 @@ const usersController = {
 	},
 	// Eliminar un usuario
 	destroy: function (req, res) {
-		let id = req.params.id;
-		let finalUsers = users.filter((user) => user.id != id);
-		fs.writeFileSync(usersFilePath, JSON.stringify(finalUsers, null, ' '));
-		res.redirect('/');
+		if (req.session.user){
+			req.session.destroy();
+		}
+		let userId = req.params.id;
+        User
+        .destroy({where: {id: userId}, force: true}) // force: true es para asegurar que se ejecute la acción
+        .then(()=>{
+            return res.redirect('/?userDeleted=true')})
+        .catch(error => res.send(error)) 
+
+
+		// let id = req.params.id;
+		// let finalUsers = users.filter((user) => user.id != id);
+		// fs.writeFileSync(usersFilePath, JSON.stringify(finalUsers, null, ' '));
+		// res.redirect('/');
 	},
 
 	profile: async function (req, res) {
