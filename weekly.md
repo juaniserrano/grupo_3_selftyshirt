@@ -20,22 +20,62 @@
 
 ---
 
-# Sprint 3 Reporte Weekly (Semana 22/02/2022 - 28/02/2022) 📝
+# Sprint 4 Reporte Weekly (Semana 22/02/2022 - 28/02/2022) 📝
 
 ## 🙋‍♂️ Juani:
 
-- _Qué hizo en la semana:_
-- _Se encontró con algún impedimento:_
-- _Qué va a hacer en los siguientes días:_
+- _Qué hizo en la semana:_ Investigacion sobre el CRUD
+- _Se encontró con algún impedimento:_ Imprementar el CRUD en la pagina sobre productos
+- _Qué va a hacer en los siguientes días:_ Poner al dia con los temas que presenten dudas
 
 ## 🙋 Evi:
 
-- _Qué hizo en la semana:_
-- _Se encontró con algún impedimento:_
-- _Qué va a hacer en los siguientes días:_
+- _Qué hizo en la semana:_ Investigar dentro del tiempo como trabaja Express.
+- _Se encontró con algún impedimento:_ Al momento de crear la vista del formulario y la lógica del controller.
+- _Qué va a hacer en los siguientes días:_ Continuar leyendo.
 
 ## 🙋 Egli:
 
-- _Qué hizo en la semana:_
-- _Se encontró con algún impedimento:_
-- _Qué va a hacer en los siguientes días:_
+- _Qué hizo en la semana:_ Leer sobre los temas vistos.
+- _Se encontró con algún impedimento:_ Implementar lógica al controller.
+- _Qué va a hacer en los siguientes días:_ Seguir investigando.
+
+# Sprint 5 Reporte Weekly (Semana 8/3/2022 - 31/3/2022) 📝
+
+## 🙋‍♂️ Juani:
+
+- _Qué hizo en la semana:_ Investigar sobre la implementacion de local, session y middlewares
+- _Se encontró con algún impedimento:_ Si, con la creacion de localStorage
+- _Qué va a hacer en los siguientes días:_ Implementar bien el manejo y ruteo de usuarios
+
+## 🙋 Evi:
+
+- _Qué hizo en la semana:_ Leer y probar en código.
+- _Se encontró con algún impedimento:_ Al crear la ruta para la vista de los usuarios registrados y el agregar al Json.
+- _Qué va a hacer en los siguientes días:_ Seguir investigando sobre Crud.
+
+## 🙋 Egli:
+
+- _Qué hizo en la semana:_ Investigar, tratar de estar al dia con todas las actividades faltantes.
+- _Se encontró con algún impedimento:_ Si, con el Multer y encriptación de contraseña.
+- _Qué va a hacer en los siguientes días:_ Seguir trabajando el código y avanzar con el próximo entregable.
+
+# Sprint 6 Reporte Weekly (Semana 31/3/2022 - 28/4/2022) 📝
+
+## 🙋‍♂️ Juani:
+
+- _Qué hizo en la semana:_ Investigacion en profundidad de sequelize e investigacion de cloudinary para subida de imagenes. Creacion de modelos de la base de datos e implementacion en el controller
+- _Se encontró con algún impedimento:_ Si, con el modelo de carrito
+- _Qué va a hacer en los siguientes días:_ Seguir investigando e implementar busqueda en la pagina
+
+## 🙋 Evi:
+
+- _Qué hizo en la semana:_ Leer, detallar los atributos necesarios para la base de datos y diseñar el DER.
+- _Se encontró con algún impedimento:_ Al exportar e importar la base de datos.
+- _Qué va a hacer en los siguientes días:_ Seguir documentando y probar el código.
+
+## 🙋 Egli:
+
+- _Qué hizo en la semana:_ Investigar, hacer pruebas de base de datos y revisar el DER.
+- _Se encontró con algún impedimento:_ Si, con la base de datos.
+- _Qué va a hacer en los siguientes días:_ Seguir trabajando el código y hacer pruebas de base de datos.
