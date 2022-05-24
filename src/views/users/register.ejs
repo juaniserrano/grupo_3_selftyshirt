@@ -22,12 +22,13 @@
         <% } %> 
         <br/>
         <h3>Datos de registro:</h3>
+      <ul class="errores"></ul> <!--Se agrega la clase errores, para que se pueda mostrar los errores que se validan desde el front-->
       <form action="/users/register" enctype="multipart/form-data" method="POST">
-        <input class="form-control p-2 my-1" type="text" name="first_name" placeholder="Nombre" />
-        <input class="form-control p-2 my-1" type="text" name="last_name" placeholder="Apellido" value="<%= locals.old && old.lastName ? old.lastName : "" %>" />
-        <input class="form-control p-2 my-1" type="email" name="email" placeholder="Correo Electronico" />
-        <input class="form-control p-2 my-1" type="password" name="password" placeholder="Elegí tu contraseña" />
-        <input class="form-control p-2 my-1" type="text" name="address" placeholder="Elegí tu direccion de envio" />
+        <input class="form-control p-2 my-1" id = "first_name" type="text" name="first_name" placeholder="Nombre" />
+        <input class="form-control p-2 my-1" id = "last_name" type="text" name="last_name" placeholder="Apellido" value="<%= locals.old && old.lastName ? old.lastName : "" %>" />
+        <input class="form-control p-2 my-1" id = "email" type="email" name="email" placeholder="Correo Electronico" />
+        <input class="form-control p-2 my-1" id = "password" type="password" name="password" placeholder="Elegí tu contraseña" />
+        <input class="form-control p-2 my-1" id = "address" type="text" name="address" placeholder="Elegí tu direccion de envio" />
   
          <!--Esto es para colocar si es user o admin, toca hacer un middleware-->
         <br />
