@@ -79,3 +79,23 @@
 - _Qué hizo en la semana:_ Investigar, hacer pruebas de base de datos y revisar el DER.
 - _Se encontró con algún impedimento:_ Si, con la base de datos.
 - _Qué va a hacer en los siguientes días:_ Seguir trabajando el código y hacer pruebas de base de datos.
+
+# Sprint 7 Reporte Weekly (Semana 28/4/2022 - 24/4/2022) 📝
+
+## 🙋‍♂️ Juani:
+
+- _Qué hizo en la semana:_ Fixear problemas generales de codigo e implementar validaciones desde el front
+- _Se encontró con algún impedimento:_ Diferencias las validaciones del front y el back
+- _Qué va a hacer en los siguientes días:_ Implementar el dashboard y creacion de API
+
+## 🙋 Evi:
+
+- _Qué hizo en la semana:_ Ver devuelta las clases de validaciones para adaptarlo al proyecto.
+- _Se encontró con algún impedimento:_ Cómo enlazar las validaciones del front y cómo validar la imagen desde el front.
+- _Qué va a hacer en los siguientes días:_ Documentar sobre APIS y dashboard.
+
+## 🙋 Egli:
+
+- _Qué hizo en la semana:_ Revisar, leer sobre express-validator para el back y front.
+- _Se encontró con algún impedimento:_ Despejar dudas sobre la librería a usar para las validaciones.
+- _Qué va a hacer en los siguientes días:_ Investigar y revisar información sobre APIS.
