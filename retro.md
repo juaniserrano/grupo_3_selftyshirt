@@ -113,3 +113,22 @@
 
 ## Less of:
 * Tiempo muerto sin trabajar en el proyecto
+
+# Retrospective Sprint 7 (Modelo Estrella de Mar) ⭐
+
+
+## Start Doing:
+* Definir las tareas de cada uno.
+* Comenzar a detallar el proyecto para saber lo que hace falta.
+
+## More of: 
+* Práctica del código.
+* Reuniones (Weeklys).
+* Determinar un tiempo único para codear.
+
+## Keep Doing:
+* Investigación de React.
+*  Reuniones (Weeklys) 2 veces por semana
+
+## Less of:
+* Dedicar menos tiempo a codear en el proyecto.
