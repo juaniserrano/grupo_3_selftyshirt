@@ -3,6 +3,9 @@
   <!-- Include Head -->
   <%- include('../partials/head', {title: 'Registrarse'}) %>
   <link rel="stylesheet" href="/css/register.css" />
+  <script src="/js/frontValidator.js"></script>
+  <!--<script src="/.../../validator/validationForm.js"></script>-->
+  
   <body>
     <!-- Header -->
     <%- include('../partials/header') %>
@@ -22,16 +25,17 @@
         <% } %> 
         <br/>
         <h3>Datos de registro:</h3>
-      <form action="/users/register" enctype="multipart/form-data" method="POST">
-        <input class="form-control p-2 my-1" type="text" name="first_name" placeholder="Nombre" />
-        <input class="form-control p-2 my-1" type="text" name="last_name" placeholder="Apellido" value="<%= locals.old && old.lastName ? old.lastName : "" %>" />
-        <input class="form-control p-2 my-1" type="email" name="email" placeholder="Correo Electronico" />
-        <input class="form-control p-2 my-1" type="password" name="password" placeholder="Elegí tu contraseña" />
-        <input class="form-control p-2 my-1" type="text" name="address" placeholder="Elegí tu direccion de envio" />
+      <ul class="errores"></ul> <!--Se agrega la clase errores, para que se pueda mostrar los errores que se validan desde el front-->
+      <form action="/users/register" enctype="multipart/form-data" method="POST" id="formNewUser">
+        <input class="form-control p-2 my-1" id="first_name" type="text" name="first_name" placeholder="Nombre" />
+        <input class="form-control p-2 my-1" id="last_name" type="text" name="last_name" placeholder="Apellido" value="<%= locals.old && old.lastName ? old.lastName : "" %>" />
+        <input class="form-control p-2 my-1" id="email" type="email" name="email" placeholder="Correo Electronico" />
+        <input class="form-control p-2 my-1" id="password" type="password" name="password" placeholder="Elegí tu contraseña" />
+        <input class="form-control p-2 my-1" id="address" type="text" name="address" placeholder="Elegí tu direccion de envio" />
   
          <!--Esto es para colocar si es user o admin, toca hacer un middleware-->
         <br />
-        <label for="avatar" class="form-label">Elegí tú Imagen:</label>
+        <label for="avatar" id='image' class="form-label">Elegí tú Imagen:</label>
         <br />
         			<input type="file" name="avatar" id="avatar" class="form-input" />
 							<small id="imageHelpBlock" class="form-text text-muted"> Imagen de hasta 2 mb </small>
@@ -45,6 +49,4 @@
     </main>
 <%- include('../partials/footer') %>
   </body>
-
-
 </html>

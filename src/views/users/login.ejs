@@ -3,6 +3,7 @@
 	<!-- Include Head -->
 	<%- include('../partials/head', {title: 'Iniciar sesión'}) %>
   <link rel="stylesheet" href="/css/login.css" />
+  <script src="/js/loginFrontValidator"></script>
 
   <body>
     <!-- Header -->
@@ -31,11 +32,14 @@
 </div>
         <% }; %>
 
+        <ul class="errores"></ul> <!--Se agrega la clase errores, para que se pueda mostrar los errores que se validan desde el front-->
+
         <h3>Ingresar con correo electronico:</h3>
       </div>
-      <form action="/users/login" method="POST">
-        <input class="my-3 rounded border" type="email" name="email" placeholder="Correo Electronico" />
-        <input class="mb-2 rounded border" type="password" name="password" placeholder="Contraseña" />
+      <ul class="erroresLogin"></ul> <!--Se agrega la clase errores, para que se pueda mostrar los errores que se validan desde el front-->
+      <form action="/users/login" method="POST" id="formLoginUser">
+        <input class="my-3 rounded border" id="emailLogin" type="email" name="email" placeholder="Correo Electronico" />
+        <input class="mb-2 rounded border" id="passwordLogin"  type="password" name="password" placeholder="Contraseña" />
         <div class="recordar-check"><label><input type="checkbox" name="remember" id="remember" value="true"> Recordar mi cuenta</label></div>
       </div>
       <div class="google_button">
