@@ -41,13 +41,19 @@ const validator = {
             ,
         check("first_name")
             .notEmpty()
-            .withMessage("Campo Nombre vacio"),
+            .withMessage("Campo Nombre vacio")
+            .isLength({min:2})
+            .withMessage("El Nombre debe contener al menos 2 caracteres"),
         check("last_name")
             .notEmpty()
-            .withMessage("Campo Apellido vacio"),
+            .withMessage("Campo Apellido vacio")
+            .isLength({min:2})
+            .withMessage("El Apellido debe contener al menos 2 caracteres"),
         check("password")
             .notEmpty()
             .withMessage("campo Password vacio")
+            .isLength({min:8})
+            .withMessage("La contraseña debe contener al menos 8 caracteres")
     ]
 }
 

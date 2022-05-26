@@ -156,3 +156,10 @@ a {
 	display: initial;
 	width: auto;
 }
+
+.errores {
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+  }

@@ -1,13 +1,17 @@
 window.addEventListener('load', function () {
   console.log('Hello! I am an alert box!!');
   //caputramos los campos del formulario
-  let userForm = document.querySelector('#formNewUser'); // Se captura el formulario
+  let userForm = document.querySelector('#formNewUser'); // Se captura el formulario user
   let first_name = document.querySelector('#first_name');
   let last_name = document.querySelector('#last_name');
   let email = document.querySelector('#email');
   let password = document.querySelector('#password');
   let image = document.querySelector('#image');
+  let loginForm = document.querySelector('#formLoginUser'); // Se captura el formulario login
+  let emailLogin = document.querySelector('#emailLogin');
+  let passwordLogin = document.querySelector('#passwordLogin');
 
+  //VALIDACION DEL FORMULARIO DE REGISTRO//
   userForm.addEventListener('submit', function (e) {
     //Se crea el evento para los campos del form
     e.preventDefault();
@@ -25,6 +29,9 @@ window.addEventListener('load', function () {
     }
 
     //VALIDACION DEL EMAIL
+    if (email.value == '') {
+      errores.push('El email no puede estar vacío');
+    }
 
     //VALIDACION PASSWORD
     if (password.value.length <= 8) {
@@ -43,6 +50,36 @@ window.addEventListener('load', function () {
       }
     } else {
       userForm.submit();
+    }
+  });
+
+  //VALIDACION DEL LOGIN//
+  loginForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    let erroresLogin = []; //
+
+    //VALIDACION DEL EMAIL
+    if (emailLogin.value == '') {
+      erroresLogin.push('Debe ingresar el email de usuario');
+    }
+    
+    //VALIDACION PASSWORD
+    if (passwordLogin.value == '') {
+      erroresLogin.push('Debe ingresar la Contraseña');
+    }
+
+    //******ERRORES*****//
+    if (erroresLogin.length > 0) {
+      e.preventDefault();
+      let ulErrores = document.querySelector('.errores');
+      ulErrores.innerHTML = ''; // Se limpia el ul para que actualice los errores
+      for (let i = 0; i < erroresLogin.length; i++) {
+        ulErrores.innerHTML += `
+        <div class="alert alert-danger w-100 text-center" role="alert">
+            <li> ${erroresLogin[i]} </li></div>`;
+      }
+    } else {
+      loginForm.submit();
     }
   });
 });
