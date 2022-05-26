@@ -3,13 +3,16 @@
   <!-- Include Head -->
   <%- include('../partials/head', {title: 'Crear producto'}) %>
   <link rel="stylesheet" href="/css/productCreate.css" />
+  <script src="/js/productFrontValidator.js"></script>
 
   <body>
     <%- include('../partials/header') %>
     <main>
       <div class="col-11 col-lg-8">
+        <ul class="errores"></ul>
+        <!--Se agrega la clase errores, para que se pueda mostrar los errores que se validan desde el front-->
         <h2 class="products-title">Formulario de creación de productos</h2>
-        <form action="/products/" method="POST" enctype="multipart/form-data">
+        <form action="/products/" id="productCreateForm" method="POST" enctype="multipart/form-data">
           <div class="row product-detail">
             <div class="col-12 col-md-10">
               <label for="name" class="form-label">Nombre del producto:</label>
