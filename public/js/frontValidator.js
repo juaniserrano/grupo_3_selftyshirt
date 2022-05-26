@@ -1,5 +1,5 @@
 window.addEventListener('load', function () {
-  console.log('Hello! I am an alert box!!');
+  console.log('test to see if Script is working');
   //caputramos los campos del formulario
   let userForm = document.querySelector('#formNewUser'); // Se captura el formulario user
   let first_name = document.querySelector('#first_name');
@@ -54,15 +54,16 @@ window.addEventListener('load', function () {
   });
 
   //VALIDACION DEL LOGIN//
+  console.log(loginForm);
   loginForm.addEventListener('submit', function (e) {
     e.preventDefault();
     let erroresLogin = []; //
-
+    console.log(loginForm);
     //VALIDACION DEL EMAIL
     if (emailLogin.value == '') {
       erroresLogin.push('Debe ingresar el email de usuario');
     }
-    
+
     //VALIDACION PASSWORD
     if (passwordLogin.value == '') {
       erroresLogin.push('Debe ingresar la Contraseña');

@@ -3,7 +3,7 @@
 	<!-- Include Head -->
 	<%- include('../partials/head', {title: 'Iniciar sesión'}) %>
   <link rel="stylesheet" href="/css/login.css" />
-  <script src="/.../../public/js/frontValidator.js"></script>
+  <script src="/js/loginFrontValidator"></script>
 
   <body>
     <!-- Header -->
@@ -31,6 +31,8 @@
             <%= locals.errorsLogin.password.msg %>
 </div>
         <% }; %>
+
+        <ul class="errores"></ul> <!--Se agrega la clase errores, para que se pueda mostrar los errores que se validan desde el front-->
 
         <h3>Ingresar con correo electronico:</h3>
       </div>
