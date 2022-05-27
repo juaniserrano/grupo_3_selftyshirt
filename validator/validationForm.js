@@ -54,6 +54,26 @@ const validator = {
             .withMessage("campo Password vacio")
             .isLength({min:8})
             .withMessage("La contraseña debe contener al menos 8 caracteres")
+    ],
+    newProduct:[
+        check("name")
+            .notEmpty()
+            .withMessage("Campo Nombre vacio")
+            .isLength({min:5})
+            .withMessage("El Nombre debe contener al menos 5 caracteres")
+            .bail(),
+        check("description")
+            .notEmpty()
+            .withMessage("Campo Descripción vacio")
+            .isLength({min:20})
+            .withMessage("La Descripción debe contener al menos 20 caracteres")
+            .bail(),
+        check("price")
+            .notEmpty()
+            .withMessage("Campo Precio vacio")
+            .isNumeric()
+            .withMessage("El Precio debe ser un número")
+            .bail(),
     ]
 }
 
