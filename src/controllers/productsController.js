@@ -12,14 +12,14 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
 
 function setImgDefault(product) {
-    if (product.category === 'socks') {
-        return 'image-default-socks.jpg';
+    if (product.category_id === '1') {
+        return 'image-default-tshirt.jpg';
     }
-    if (product.category === 'hoodie') {
+    if (product.category_id === '2') {
         return 'image-default-hoodie.jpg';
     }
-    if (product.category === 'tshirt') {
-        return 'image-default-tshirt.jpg';
+    if (product.category_id === '3') {
+        return 'image-default-socks.jpg';
     }
 }
 
@@ -71,6 +71,7 @@ const controller = {
                 category_id: req.body.category,
                 image: '',
             };
+            console.log(newProduct);
             newProduct.image = req.file ? req.file.filename : setImgDefault(newProduct);
             let productCreated = await Product.create(newProduct);
             res.redirect('/products/detail/' + productCreated.id);

@@ -42,12 +42,18 @@ INSERT INTO `categories` (`id`, `name`, `created_at`, `updated_at`) VALUES
 -- Dumping structure for table selftyshirt.roles
 DROP TABLE IF EXISTS `roles`;
 CREATE TABLE IF NOT EXISTS `roles` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `id` int(10) unsigned NOT NULL DEFAULT 1,
   `name` varchar(60) NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
+
+INSERT INTO `roles` (`id`, `name`, `created_at`, `updated_at`) VALUES
+(1, 'User', '2022-05-26 18:31:06', '2022-05-26 18:31:06'),
+(2, 'Admin', '2022-05-26 18:31:17', '2022-05-26 18:31:17'),
+(3, 'Super Admin', '2022-05-26 18:31:38', '2022-05-26 18:31:38');
+
 
 -- Data exporting was unselected.
 
@@ -60,14 +66,13 @@ CREATE TABLE IF NOT EXISTS `users` (
   `email` varchar(60) NOT NULL,
   `password` varchar(250) NOT NULL,
   `address` varchar(100) NOT NULL,
-  `role_id` int(10) unsigned DEFAULT 1,
+  `role_id` int(10) unsigned NOT NULL DEFAULT 1,
   `image` varchar(200) DEFAULT NULL,
   `newsletter` tinyint(1) NOT NULL DEFAULT 1,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `users_role_id_foreign` (`role_id`),
-  CONSTRAINT `users_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON DELETE SET NULL ON UPDATE SET NULL
+  KEY `role_id` (`role_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4;
 
 -- Data exporting was unselected.
@@ -129,6 +134,10 @@ CREATE TABLE IF NOT EXISTS `products_orders` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- Data exporting was unselected.
+
+ALTER TABLE `users`
+  ADD CONSTRAINT `FK_users_roles` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+COMMIT;
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
