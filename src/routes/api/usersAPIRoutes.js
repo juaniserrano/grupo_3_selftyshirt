@@ -6,6 +6,6 @@ const usersAPIController = require('../../controllers/api/usersAPIController');
 //Listado de todos los usuarios
 router.get('/', usersAPIController.list);
 //Detalle de usuario
-//router.get('/:id', usersAPIController.detail);
+router.get('/:id', usersAPIController.detail);
 
 module.exports = router;
