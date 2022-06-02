@@ -1,187 +1,211 @@
 .product-img {
-	max-width: 100%;
-	max-height: 25rem;
-	align-self: center;
+    max-width: 100%;
+    max-height: 25rem;
+    align-self: center;
 }
 
 .card-img {
-	display: flex;
-	align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .products-top-bar {
-	background-color: black;
-	color: white;
-	font-size: 12px;
-	height: 100%;
-	padding: 2em;
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    height: 100%;
+    padding: 2em;
 }
 
 .priceStrike {
-	color: grey;
-	text-decoration: line-through;
+    color: grey;
+    text-decoration: line-through;
 }
 
 .product-box {
-	border: 2px solid black;
-	margin: 0.1em;
-	padding: 0.4em;
-	height: 100%;
-	align-items: center;
-	display: flex;
-	flex-direction: column;
-	transition: background-color 2s ease-out 100ms;
-	min-width: 8em;
-	background-color: white;
-	border-radius: 6px;
-	transition: box-shadow 0.3s;
-	position: relative;
-	z-index: 0;
+    border: 2px solid black;
+    margin: 0.1em;
+    padding: 0.4em;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 2s ease-out 100ms;
+    min-width: 8em;
+    background-color: white;
+    border-radius: 6px;
+    transition: box-shadow 0.3s;
+    position: relative;
+    z-index: 0;
+    min-height: 20rem;
 }
 
 .row main {
-	background-color: #ededed;
+    background-color: #ededed;
 }
 
 .product-box:hover {
-	box-shadow: 0 25px 20px 0 rgba(0, 0, 0, 0.16), 0 -1px 2px 0 rgba(0, 0, 0, 0.1);
-	z-index: 2;
+    box-shadow: 0 25px 20px 0 rgba(0, 0, 0, 0.16), 0 -1px 2px 0 rgba(0, 0, 0, 0.1);
+    z-index: 2;
 }
 
 .product-box_image {
-	max-height: 20rem;
-	max-width: 25em;
-	min-width: 15em;
+    max-height: 20rem;
+    max-width: 25em;
+    min-width: 15em;
 }
 
 .row {
-	--bs-gutter-x: 0;
+    --bs-gutter-x: 0;
 }
 
 .col {
-	align-self: center;
+    align-self: center;
 }
 
 /*CHECKBOX STYLE */
 input[type='checkbox'] {
-	/* Add if not using autoprefixer */
-	-webkit-appearance: none;
-	appearance: none;
-	/* For iOS < 15 to remove gradient background */
-	background-color: #fff;
-	/* Not removed via appearance */
-	margin: 0;
-	font: inherit;
-	color: currentColor;
-	width: 1.15em;
-	height: 1.15em;
-	border: 0.15em solid currentColor;
-	border-radius: 0.15em;
-	transform: translateY(-0.075em);
-	gap: 1vh;
-	display: grid;
-	place-content: center;
-	margin-right: 0.4em;
-	margin-top: 0.1em;
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    appearance: none;
+    /* For iOS < 15 to remove gradient background */
+    background-color: #fff;
+    /* Not removed via appearance */
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid currentColor;
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+    gap: 1vh;
+    display: grid;
+    place-content: center;
+    margin-right: 0.4em;
+    margin-top: 0.1em;
 }
 
 input[type='checkbox']::before {
-	content: '';
-	width: 0.65em;
-	height: 0.65em;
-	transform: scale(0);
-	transition: 120ms transform ease-in-out;
-	box-shadow: inset 1em 1em black;
-	display: grid;
-	place-content: center;
-	transform-origin: bottom left;
-	clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+    content: '';
+    width: 0.65em;
+    height: 0.65em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em black;
+    display: grid;
+    place-content: center;
+    transform-origin: bottom left;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
 }
 
 input[type='checkbox']:checked::before {
-	transform: scale(1);
-	display: grid;
-	place-content: center;
+    transform: scale(1);
+    display: grid;
+    place-content: center;
 }
 
 .categorias label,
 .talle label {
-	display: flex;
-	align-items: center;
-	width: fit-content;
-	font-size: 1.4em;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    font-size: 1.4em;
 }
 
 .form {
-	display: flex;
-	flex-direction: column;
-	width: 80%;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
 }
 
 .sale {
-	position: absolute;
-	display: inline-block;
-	background: red;
-	color: white;
-	height: 2.5rem;
-	width: 2.5rem;
-	text-align: center;
-	vertical-align: middle;
-	line-height: 1.2rem;
-	transform: rotate(-20deg);
-	animation: beat 1.2s ease infinite alternate;
-	align-self: end;
-	z-index: 1;
+    position: absolute;
+    display: inline-block;
+    background: red;
+    color: white;
+    height: 2.5rem;
+    width: 2.5rem;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 1.2rem;
+    transform: rotate(-20deg);
+    animation: beat 1.2s ease infinite alternate;
+    align-self: end;
+    z-index: 1;
 }
 .sale:before,
 .sale:after {
-	content: '';
-	position: absolute;
-	background: inherit;
-	height: inherit;
-	width: inherit;
-	top: 0;
-	left: 0;
-	z-index: -1;
-	transform: rotate(30deg);
+    content: '';
+    position: absolute;
+    background: inherit;
+    height: inherit;
+    width: inherit;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transform: rotate(30deg);
 }
 .sale:after {
-	transform: rotate(60deg);
+    transform: rotate(60deg);
 }
 
 .prodcuts {
-	padding-top: 1em;
+    padding-top: 1em;
+}
+
+.oos {
+    color: white;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 3;
+    border-radius: 6px;
+    width: 30rem;
+    height: 40%;
+}
+
+.oos-cont {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @keyframes beat {
-	from {
-		transform: rotate(-20deg) scale(1);
-	}
-	to {
-		transform: rotate(-20deg) scale(1.1);
-	}
+    from {
+        transform: rotate(-20deg) scale(1);
+    }
+    to {
+        transform: rotate(-20deg) scale(1.1);
+    }
 }
 
 @media (max-width: 769px) {
-	.p-3 {
-		padding: 0.3rem !important;
-	}
-	.col-lg-2 {
-		border-bottom: 2px solid black;
-		border-right: 0 !important;
-		text-align: center;
-		display: flex;
-		flex-direction: column;
-	}
+    .p-3 {
+        padding: 0.3rem !important;
+    }
+    .col-lg-2 {
+        border-bottom: 2px solid black;
+        border-right: 0 !important;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
 
-	.categorias {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-	.talle {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
+    .categorias {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .talle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .oos {
+        width: 12rem;
+    }
 }

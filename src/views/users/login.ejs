@@ -13,9 +13,9 @@
     <main class="register">
       <div class="datos-registro">
         <div class="logo-ctn">
-          <img src="/images/logo-orange-blue.png" alt="" class="pic" />
+          <img src="/images/loginvector.svg" alt="" class="pic" />
         </div>
-        <h2>Bienvenido!</h2>
+        <div class="title-login"><h2>Bienvenido!</h2></div>
         <% if(locals.errorMsg){ %>
                           <div class="alert alert-danger" role="alert">
             <%= errorMsg %>
@@ -38,9 +38,9 @@
       </div>
       <ul class="erroresLogin"></ul> <!--Se agrega la clase errores, para que se pueda mostrar los errores que se validan desde el front-->
       <form action="/users/login" method="POST" id="formLoginUser">
-        <input class="my-3 rounded border" id="emailLogin" type="email" name="email" placeholder="Correo Electronico" />
-        <input class="mb-2 rounded border" id="passwordLogin"  type="password" name="password" placeholder="Contraseña" />
-        <div class="recordar-check"><label><input type="checkbox" name="remember" id="remember" value="true"> Recordar mi cuenta</label></div>
+        <input class="form-control p-2 my-2" id="emailLogin" type="email" name="email" placeholder="Correo Electronico" />
+        <input class="form-control p-2 my-2" id="passwordLogin"  type="password" name="password" placeholder="Contraseña" />
+        <div class="recordar-check my-2"><label><input type="checkbox" name="remember" id="remember" value="true"> Recordar mi cuenta</label></div>
       </div>
       <div class="google_button">
         <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="">
